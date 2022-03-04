@@ -3,7 +3,7 @@ package day3;
 import java.util.*;
 
 public class character_Count {
-	public static void main(String[] args) {
+	public static String count(String s) {
 		Map<Character, List<Integer>> dict = new HashMap<>();
 		s = s.replaceAll(" ", "");
 		for (int i = 0; i < s.length(); i++) {
@@ -20,10 +20,10 @@ public class character_Count {
 	}
 	public static void main(String[] args) {
 		List<String> slist=new ArrayList<>();
-		s.list.add("upendar");
-		s.list.add("Mallikarjun");
-		s.list.add("Varun");
-		s.list.add("Saikumar");
+		slist.add("upendar");
+		slist.add("Mallikarjun");
+		slist.add("Varun");
+		slist.add("Saikumar");
 		
 		for (String name :slist) {
 			System.out.println(name);
