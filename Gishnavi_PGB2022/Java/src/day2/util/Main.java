@@ -1,4 +1,4 @@
-package day2;
+package day2.util;
 
 public class Main {
     static int factorial(int num){    
