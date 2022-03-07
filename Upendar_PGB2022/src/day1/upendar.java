@@ -1,8 +1,7 @@
-package day1.ProjectGreen;
+package day1;
 
-public class Upendar {
+public class upendar {
     public static void main(String[] args) {
         System.out.println("Hello, World!"); 
     }
 }
-

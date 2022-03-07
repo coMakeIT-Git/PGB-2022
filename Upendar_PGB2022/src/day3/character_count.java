@@ -2,7 +2,7 @@ package day3;
 
 import java.util.*;
 
-public class character_Count {
+public class character_count {
 	public static String count(String s) {
 		Map<Character, List<Integer>> dict = new HashMap<>();
 		s = s.replaceAll(" ", "");

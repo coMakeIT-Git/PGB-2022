@@ -1,5 +1,5 @@
-package JAVA.src.day3;
-
+package day3;
+ 
 import java.util.*;
 
 //Interface Class
