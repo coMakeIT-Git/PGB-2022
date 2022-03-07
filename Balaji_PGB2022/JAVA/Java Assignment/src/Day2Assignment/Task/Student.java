@@ -1,12 +1,11 @@
-package Task1;
-
+package Day2Assignment.Task;
 public class Student {
 	  private int stid;
 	  private String stname;
 	  private int stage;
 	  Student()
 	  {
-		  System.out.print("This is Default COnstructor!!!");
+		  System.out.println("This is Default COnstructor!!!");
 	  }
 	public Student(int stid, String stname, int stage) {
 		System.out.println("This is Parameterized Constructor!!!");
@@ -45,26 +44,26 @@ public class Student {
 		return this.stid*this.stname.hashCode();
 	}
 	public void display(int stid) {
-		System.out.println("Id is:" +stid);
+		System.out.println("Student Id is:" +stid);
 	}
 	public void display(int stid,String stname)
 	{
-		System.out.println("Id is:" +stid +"Name is:"+stname);
+		System.out.println("Student Id is:" +stid +"Student Name is:"+stname);
 	}
-}
 
 
-class Main
-{
+
 	public static void main(String args[])
 	{
 		Student s1=new Student(01,"Akhil",21);
 		Student s2=new Student(02,"Nithish",18);
 		Student s3=new Student(01,"Akhil",21);
 		Student object=new Student();
-		System.out.println(s1.equals(s2));
-		System.out.println(s2.equals(s3));
-		System.out.println(s3.equals(s1));
+		System.out.print("Comparing two objects");
+		System.out.println("Comparing s1 and s2 objects"+" "+s1.equals(s2));
+		System.out.println("Comparing s2 and s3 objects"+" "+s2.equals(s3));
+		System.out.println("Comparing s3 and s1 objects"+" "+s3.equals(s1));
+		System.out.println("Printing HashCodes Of every Objects");
 		System.out.println(s1.hashcode()+" "+s2.hashcode()+" "+ s3.hashcode());
 	    object.display(s1.getStid());
 	    object.display(s1.getStid(),s1.getStname());

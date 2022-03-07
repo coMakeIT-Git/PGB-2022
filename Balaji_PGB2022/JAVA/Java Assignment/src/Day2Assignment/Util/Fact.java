@@ -1,8 +1,8 @@
-package Util;
+package Day2Assignment.Util;
 
 public class Fact {
 	
-		public int non_recursive(int num)
+		public static int non_recursive(int num)
 		{
 			int fact=1;
 			for(int i=1;i<=num;i++)
@@ -11,7 +11,7 @@ public class Fact {
 			}
 			return fact;
 		}
-		public int recursive(int n)
+		public static int recursive(int n)
 		{
 			if(n==1) return 1;
 			else

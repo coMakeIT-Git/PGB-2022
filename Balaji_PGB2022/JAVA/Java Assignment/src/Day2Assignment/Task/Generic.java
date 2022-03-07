@@ -1,4 +1,6 @@
-package Task1;
+package Day2Assignment.Task;
+
+
 
 public class Generic<T> {
    T value;
@@ -16,6 +18,7 @@ public class Generic<T> {
 	   Generic<Boolean> bobj=new Generic<>(true);
 	   Generic<String> sobj=new Generic<>("RAM");
 	   Generic<Double> dobj=new Generic<>(78.24321);
+	   System.out.println("Displaying different types using Generic class");
 	   System.out.println(iobj.display());
 	   System.out.println(bobj.display());
 	   System.out.println(sobj.display());
