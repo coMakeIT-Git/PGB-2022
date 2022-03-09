@@ -22,10 +22,10 @@ public class Training{
     public static Map<String, ArrayList<Employee>> Groups = Collections.synchronizedMap(new HashMap<String, ArrayList<Employee>>());
 
     
-   synchronized public static int add_Employee_to_list(int id, String name) { 
+   public static int add_Employee_to_list(int id, String name) { 
 		Employee new_Employee = new Employee(id, name);
         Employeelist.add(new_Employee);
-//        System.out.println("New Employee Added To EmployeeList:\n\tName : "+name+"\n\tID : "+id);
+		//        System.out.println("New Employee Added To EmployeeList:\n\tName : "+name+"\n\tID : "+id);
 		return (Employeelist.size() - 1);
 	}
 	

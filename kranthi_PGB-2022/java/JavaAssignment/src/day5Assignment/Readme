@@ -1,0 +1,48 @@
+#1 out put for the thread pool
+
+pool-1-thread-1(Start) Message=0
+pool-1-thread-5(Start) Message=4
+pool-1-thread-4(Start) Message=3
+pool-1-thread-3(Start) Message=2
+pool-1-thread-2(Start) Message=1
+pool-1-thread-1(Start) End
+pool-1-thread-5(Start) End
+pool-1-thread-1(Start) Message=5
+pool-1-thread-4(Start) End
+pool-1-thread-4(Start) Message=7
+pool-1-thread-2(Start) End
+pool-1-thread-5(Start) Message=6
+pool-1-thread-3(Start) End
+pool-1-thread-2(Start) Message=8
+pool-1-thread-3(Start) Message=9
+pool-1-thread-4(Start) End
+pool-1-thread-1(Start) End
+pool-1-thread-2(Start) End
+pool-1-thread-3(Start) End
+pool-1-thread-5(Start) End
+Finished all threads
+
+-------------------------------------------------------------------------------
+#2 Method References:
+Using Static method reference  to print Square of a number:
+25
+Printing sum using instance reference:
+13
+Method referencing using Constructor:
+I am a method of class Employee
+I am a method of class Employee
+-------------------------------------------------------------------------------
+#3 OutPut for the stream() Program:
+
+Enter any 6 numbers:
+2 3 4 5 6 7
+Numbers  after converting in to list
+[2, 3, 4, 5, 6, 7]
+Prime numbers less than 5:
+7
+5
+3
+2
+Sum of the numbers using Reduce:
+27
+---------------------------------------------------------------------------------

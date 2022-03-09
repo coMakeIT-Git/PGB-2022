@@ -1,0 +1,37 @@
+1. Threadpool.java
+
+Building Brick House at Plot number 102...
+Walls Built: Bricks		Thread ID:13
+
+Building Stone House at Plot number 103...
+Walls Built: Stone		Thread ID:14
+
+Building Castle at Plot number 101...
+Walls Built: Jewels		Thread ID:12
+
+Building Igloo at Plot number 105...
+Walls Built: Ice		Thread ID:14
+
+Building Tree House at Plot number 104...
+Walls Built: Wood		Thread ID:13
+
+
+
+
+
+2. MethodReference.java
+
+Building...
+Building...
+Name: Tree House
+Walls Built: Wood
+
+
+
+
+
+3. Prime.java
+
+Elements: [1, 45, 23, 7, 9, 100, 677, 43, 17, 19, 9]
+Primes less than 25 in descending order: 
+23 19 17 7 1
