@@ -1,0 +1,64 @@
+package saikeerthana;
+public class Employee {
+
+	private String empname;
+	private int empid;
+	private String country;
+	Employee()
+	{
+		System.out.println("default constructor called");
+		
+	}
+	 public Employee( String empname,int empid,String country)
+	{
+		this.empname=empname;
+		this.empid=empid;
+		this.country=country;
+	}
+	 
+	 public String getName() {
+			return empname;
+		}
+	 
+		public void setName(String empname) {
+			this.empname = empname;
+		}
+	 
+		public int getId() {
+			return empid;
+		}
+	 
+		public void setId(int empid) {
+			this.empid = empid;
+		}
+		public String getcountryname()
+		 {
+			 return country;
+		 }
+	 public void setcountryname(String country)
+	 {
+		 this.country=country;
+	 }
+	
+	 @Override
+	  public boolean equals(Object o)
+	 {
+		 if(this==o)
+			 return true;
+		 if(o==null || o.getClass()!=this.getClass() ) {
+			 return false;
+		 }
+		 Employee emp=(Employee) o;
+		 return (emp.empname==this.empname && emp.empid==this.empid && emp.country==this.country);
+	 }
+	 
+	 @Override
+		public int hashCode() {
+			// returning id as hashCode value 
+			return this.empid;
+	 }
+	 
+	 
+	
+}
+

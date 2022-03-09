@@ -1,0 +1,40 @@
+1. ConsoleIO.java
+
+Enter a string: The number 12 is divisibe by 1, 2, 3, 4, 6 and 12.
+
+Input: The number 12 is divisibe by 1, 2, 3, 4, 6 and 12.
+
+Integers in input : 1	2	1	2	3	4	6	1	2	
+
+Sum of Integers: 22
+Dividing the sum by 0...
+Error: A number cannot be divided by 0!
+
+
+
+
+
+
+2. CheckedException.java
+
+Error: Class not found!
+
+
+
+
+
+3. UncheckedException.java
+
+Error: Array is empty. Cannot print length!
+
+
+
+
+
+4. LambdaInterface.java
+
+Enter name: Chaitra Mudili
+Hello Chaitra Mudili!
+
+***Runnable as Lambda expression***
+

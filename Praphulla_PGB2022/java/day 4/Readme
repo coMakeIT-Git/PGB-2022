@@ -1,0 +1,134 @@
+OUTPUT:
+
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ javac JavaExceptions.java
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ java JavaExceptions 
+Argument is missing, Enter a string {args[0]}
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ java JavaExceptions Raphy123
+The integers are	
+123
+Enter your name: 
+Praphulla Gumma
+Welcome Praphulla Gumma
+Enter a String:
+Raphy1235@#$%praph123
+Custom Exception Handled:	Input string::Raphy1235@#$%praph123	shouldn't contain special characters!!	
+Enter a string without any special characters:
+Raphy123praph55
+The newly Entered String is:	Raphy123praph55
+The Integers present in the newly string are	
+1
+2
+3
+5
+5
+The sum of integers is:16
+The integers are	
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at JavaExceptions.main(JavaExceptions.java:159)
+--------------------------------------------------------------------------------------------------------------
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ javac JavaExceptions.java
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ java JavaExceptions 
+Argument is missing, Enter a string {args[0]}
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ java JavaExceptions Raphy123 4 5
+The integers are	
+123
+Enter your name: 
+Praphulla Gumma
+Welcome Praphulla Gumma
+Enter a String:
+Raphy##@%@%@21757
+Custom Exception Handled:	Input string::Raphy##@%@%@21757	shouldn't contain special characters!!	
+Enter a string without any special characters:
+Praphulla2586286
+The newly Entered String is:	Praphulla2586286
+The Integers present in the newly string are	
+2
+5
+8
+6
+2
+8
+6
+The sum of integers is:37
+The integers are	
+The integers are	
+First Number = 123
+Second Number = 4
+Sum of the Two Numbers is = 127
+Enter a number for testing propagation:
+9
+Arithematic Exception is handled:java.lang.ArithmeticException: / by zero
+Back to Normal flow
+Lambda without datatypes: 16.0
+Lambda without datatypes: 256.0
+Lambda for Runnable
+------------------------------------------------------------------------------------------
+ java JavaExceptions Raphy123 
+The integers are	
+123
+Enter your name: 
+LUNA
+Welcome LUNA
+Enter a String:
+PRAPHULLA6832#$44$
+Custom Exception Handled:	Input string::PRAPHULLA6832#$44$	shouldn't contain special characters!!	
+Enter a string without any special characters:
+PRAPHULLA9768
+The newly Entered String is:	PRAPHULLA9768
+The Integers present in the newly string are	
+9
+7
+6
+8
+The sum of integers is:30
+The integers are	
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+at JavaExceptions.main(JavaExceptions.java:159)
+---------------------------------------------------------------------------------------------------
+javac JavaExceptions.java
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ java JavaExceptions Raphy1002 56 76
+The integers are	
+1002
+Enter your name: 
+Praphulla Gumma
+Welcome Praphulla Gumma
+Enter a String:
+
+Null Pointer Exception Handled!
+Feild is empty, Enter a string!
+------------------------------------------------------------------------
+javac JavaExceptions.java
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day 4$ java JavaExceptions Raphy1002 56 78
+The integers are	
+1002
+Enter your name: 
+Praphulla Gumma
+Welcome Praphulla Gumma
+Enter a String:
+Praphulla29739^$^$&%Ffhf
+Custom Exception Handled:	Input string::Praphulla29739^$^$&%Ffhf	shouldn't contain special characters!!	
+Enter a string without any special characters:
+Praphulla Gumma
+The newly Entered String is:	Praphulla Gumma
+The Integers present in the newly string are	
+The sum of integers is:0
+The integers are	
+The integers are	
+First Number = 56
+Second Number = 78
+Sum of the Two Numbers is = 134
+Enter a number for testing propagation:
+5
+Arithematic Exception is handled:java.lang.ArithmeticException: / by zero
+Back to Normal flow
+Lambda without datatypes: 16.0
+Lambda without datatypes: 256.0
+Lambda for Runnable
+-------------------------------------------
+OUTPUT2:
+avac customLambda.java
+error: file not found: customLambda.java
+Usage: javac <options> <source files>
+use --help for a list of possible options
+
+

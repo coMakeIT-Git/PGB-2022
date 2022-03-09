@@ -1,0 +1,18 @@
+import java.util.*;
+public class Hashcodeequals {
+
+	private String empname;
+	private int empid;
+	private 
+	//public Hashcodeequals() {
+		
+		
+		
+	//}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

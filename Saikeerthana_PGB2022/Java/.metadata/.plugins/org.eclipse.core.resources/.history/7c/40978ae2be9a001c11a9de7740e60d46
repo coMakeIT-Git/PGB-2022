@@ -1,0 +1,48 @@
+package saikeerthana;
+import java.util.*;
+public class Employee {
+
+	private String empname;
+	private int empid;
+	private String country;
+	Employee()
+	{
+		System.out.println("default constructor called");
+		
+	}
+	 public Employee( String empname,int empid)
+	{
+		this.empname=empname;
+		this.empid=empid;
+	}
+	 public void setcountryname(String country)
+	 {
+		 this.country=country;
+	 }
+	 public String getcountryname()
+	 {
+		 return country;
+	 }
+	 public boolean equals(Object o)
+	 {
+		 if(this==o)
+			 return true;
+		 if(o==null || o.getClass()!=this.getClass() ) {
+			 return false;
+			 Hashcodeequ
+		 }
+	 }
+	
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Hashcodeequals e1=new Hashcodeequals("hari",1234);
+		e1.setcountryname("India");
+		System.out.println(e1.getcountryname());
+		
+		
+		
+	}
+}

@@ -1,0 +1,9 @@
+package saikeerthana;
+
+public class Genericclass {
+
+	public Genericclass() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

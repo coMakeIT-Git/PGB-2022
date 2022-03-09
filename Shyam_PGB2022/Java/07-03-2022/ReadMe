@@ -1,0 +1,24 @@
+Output for CheckedExceptions:
+localadmin@INHYDUPGB1:~/PGB-2022/Shyam_PGB2022/Java/07-03-2022$ javac CheckedExample.java
+localadmin@INHYDUPGB1:~/PGB-2022/Shyam_PGB2022/Java/07-03-2022$ java CheckedExample
+Exception in thread "main" java.io.FileNotFoundException: Read.txt (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at CheckedExample.main(CheckedExample.java:6)
+
+-----------------------------------------------------------------------------------------------------------
+
+Output for Hello: **Includes All the other mentioned tasks**
+localadmin@INHYDUPGB1:~/PGB-2022/Shyam_PGB2022/Java/07-03-2022$ javac Hello.java
+localadmin@INHYDUPGB1:~/PGB-2022/Shyam_PGB2022/Java/07-03-2022$ java Hello abec13244ty cc6543d
+First Number = 13244
+Second Number = 6543
+Addition Of Two Numbers = 19787
+Runtime Exception Handled: Arithmetic Exception
+Custom Exception Handled: Don't take inputs more than '2'  
+Lambda without datatypes: 200
+Lambda with datatypes: 20000
+Hey: Here the lambda for Runnable says hi
+------------------------------------------------------------------------------------------------------------
