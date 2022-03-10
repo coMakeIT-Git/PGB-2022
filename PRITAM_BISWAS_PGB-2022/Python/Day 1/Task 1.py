@@ -214,8 +214,10 @@ example: {1: [1, 2, 3, 4], 'Name': 'Geeks'}
 """
 
 #Create a dictionary with 3 different keys, all with the value '5' using inbuilt method
-dict1={"geeks": 2,"hello": 5,"world":5}
-print(dict1)
+keys = {'a', 'e', 'i', 'o', 'u' }
+value=5
+vowels = dict.fromkeys(keys,value)
+print(vowels)
 """Create a dictionary  and and apply respective inbuilt method to 
 1.Return the value of the specified key : dictionary.get(keyname, value) or dictionary(keyname)
 2. Print all key, value pairs
