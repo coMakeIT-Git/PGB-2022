@@ -213,7 +213,7 @@ syntax: dictionaryname={key: value}
 example: {1: [1, 2, 3, 4], 'Name': 'Geeks'}
 """
 
-#Create a dictionary with 3 different keys, all with the value '5' using inbuilt method
+#Create a dictionary with 3 different keys, all with the value '5' using  fromkeys() inbuilt method 
 keys = {'a', 'e', 'i', 'o', 'u' }
 value=5
 vowels = dict.fromkeys(keys,value)
