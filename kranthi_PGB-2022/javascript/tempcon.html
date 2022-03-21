@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>TEMPERATURE CONVERTER</p>
+<p>please enter input type and value it will convert into other types of temperature</p>
+<p>CELCIUS: C     FARENHEIT: F     KELVIN :K   </p>
+
+<input id="myInput" type="text" placeholder="Enter temperature type"  >
+<br>
+<input id="myInput1" type="number" placeholder="value">
+<br>
+<button onclick="myFunction()">Convert</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  var text;
+  var tempty = document.getElementById("myInput").value;
+
+  switch(tempty) {
+    case "C":
+    ctofk();
+    break;
+    case "F":
+    ftock();
+    break;
+    case "K":
+    ktocf();
+    break;
+    default:
+    text = "please enter only C K F types only";
+    document.getElementById("demo").innerHTML = text;
+  }
+  
+}
+
+function ctofk(){
+var temp = document.getElementById("myInput1").value;
+let f1,k1;
+
+f1=eval((temp*9/5)+32)
+k1=parseInt(temp)+273
+
+
+document.getElementById("demo2").innerHTML = temp+"  celcius is equal to  :  "+f1+" farenheits";
+document.getElementById("demo1").innerHTML = temp+"  celcius is equal to  :  "+k1+" Kelvin";
+
+}
+
+
+
+function ktocf(){
+var temp = document.getElementById("myInput1").value;
+let c1,f2;
+
+f2=eval(((temp-273)*1.8)+32)
+c1=parseInt(temp)-273
+
+document.getElementById("demo2").innerHTML = temp+"  kelvin is equal to  :  "+f2+" farenheits";
+document.getElementById("demo1").innerHTML = temp+"  kelvin is equal to  :  "+c1+" celcius";
+
+}
+
+
+
+function ftock(){
+var temp = document.getElementById("myInput1").value;
+let c2,k2;
+
+c2=eval((temp-32)/1.8)
+k2=((parseInt(temp)-32)/1.8)+273.15
+
+document.getElementById("demo2").innerHTML = temp+" farenheit is equal to  :  "+c2+" celcius";
+document.getElementById("demo1").innerHTML = temp+"  farenheit is equal to  :  "+k2+" Kelvin";
+
+}
+</script>
+
+</body>
+</html>
+

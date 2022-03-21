@@ -16,12 +16,12 @@ file.close()
 
 #remove newline characters from a file
 
-def newline(file):
+def newline():
     f1 = open("Text.txt").readlines()
     return [s.rstrip('\n') for s in f1]
 
 
-print(newline("txtdemo"))
+print(newline())
 
 
 #copy the contents of a file to another file

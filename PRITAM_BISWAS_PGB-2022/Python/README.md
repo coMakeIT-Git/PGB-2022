@@ -154,8 +154,6 @@
 
 
 1. Write a simple program which loops over a list of user data (tuples containing a username, email and age) and adds each user to a dictionary if the user is at least 16 years old. You do not need to store the age. Write a simple exception hierarchy which defines a different exception for each of these error conditions:
-
-	a. the username is not unique
 	b. the age is not a positive integer
 	c. the user is under 16
 	d. the email address is not valid (a simple check for a username, the @ symbol and a domain name is sufficient)
@@ -171,7 +169,7 @@
 	Note: Some words can be separated by a comma with no space.
 4. Write a Python program to remove newline characters from a file (multiple blank lines)
 5. Write a Python program to copy the contents of a file to another file .( if file already exits then raise a exception and use input from user to create a new file with new name)
-6. Write a Python program that reads each row of a given csv file and skip the header of the file. Also print the number of rows and the field names.
+6. Write a Python program that reads each row of a given csv file and skip the header of the file. Also print the number of rows and the field names.()
 7. A text file named "matter.txt" contains some text, which needs to be displayed such that every next character is separated by a symbol "#". 
 	Write a function definition for hash_display() in Python that would display the entire content of the file matter.txt in the desired format.
 	Example :

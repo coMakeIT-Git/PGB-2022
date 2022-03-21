@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock-Paper-Scissor Game</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="scores">
+            <p>Computer Score : 
+                <span id="computer_score">0</span>
+            </p>
+            <p>User Score : 
+                <span id="user_score">0</span>
+            </p>
+            <button id="reset" onclick="reset()">RESET</button>
+        </div>
+        <div class="hand">
+            <button onclick="comparer('rock')">
+                <i class="fas fa-hand-rock"></i>
+            </button>
+            <button onclick="comparer('paper')">
+                <i class="fas fa-hand-paper"></i>
+            </button>
+            <button onclick="comparer('scissor')">
+                <i class="fas fa-hand-scissors"></i>
+            </button>
+        </div>
+        <div class="details">
+            <p id="user_choice"></p>
+            <p id="comp_choice"></p>
+            <p id="result"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+*{
+    background: radial-gradient(ellipse at center, #443501 0%,#000000 100%);;
+    text-align: center;
+}
+.fontn{
+    font-family: 'Tangerine', serif;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 50px;
+    font-weight: bolder;
+    color:#ffffff;
+}
+.btncolor{
+    color: #ffffff;
+}
+.form-group{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#inputTxt{
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 2%;
+    color: #ffffff;
+    font-size: 35px;
+}
+#outputTxt{
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 2%;
+    color:#ffffff;
+    font-size: 35px;
+}

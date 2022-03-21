@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <script src="main.js"></script>
+      <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+<div id="container">
+  <div class="speech">Cipher-Input to Encrypt</div>
+  <div class="input">
+    <form id="form">
+      Code:
+      <input type="text" id="cypher"/>
+      </br>
+    </br>
+      Shift:
+      <input type="number" value="7" id="offset"/>
+      <br/>
+      <br/>
+      <br/>
+      Encrypted Value:
+      <input type="text" id="finish"/>
+
+      <br/>
+      <br/>
+      <br/>
+      
+    </form>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+var fullAlphabet = alphabet + alphabet + alphabet;
+
+function runCipher(){
+  var cipherText = $('#cypher').val();
+  console.log(cipherText);
+  var cipherOffset = $('#offset').val();
+  cipherOffset = (cipherOffset % alphabet.length);
+  var cipherFinish = '';
+
+  for(i=0; i<cipherText.length; i++){
+     var letter = cipherText[i];
+     var upper = (letter == letter.toUpperCase());
+     letter = letter.toLowerCase();
+    
+     var index = alphabet.indexOf(letter);
+     if(index == -1){
+       cipherFinish += letter;
+     } else {
+       index = ((index + cipherOffset) + alphabet.length);
+       var nextLetter = fullAlphabet[index];
+       if(upper) nextLetter = nextLetter.toUpperCase();
+       cipherFinish += nextLetter;
+     }
+  }
+    
+  $('#finish').val(cipherFinish);
+}
+
+$(document).ready(function() {
+  $('#cypher').keypress(function(){
+    setTimeout(function(){ runCipher(); },5);
+  });
+  $('#cypher').blur(function(){
+    runCipher();
+  });
+  $('#offset').change(function(){
+    setTimeout(runCipher(),20);
+  });
+  
+});
+</script>
+</body>
+</html>

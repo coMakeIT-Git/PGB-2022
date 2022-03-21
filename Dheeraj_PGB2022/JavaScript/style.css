@@ -1,0 +1,49 @@
+body{
+    height: 100px;
+    background: linear-gradient(
+        135deg,
+        #d4c8ff,
+        #b384ff
+    );
+}
+.hand{
+    display: flex;
+    margin: 7%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hand button{
+    color: #000000;
+    border: red;
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+.scores,.details{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+#reset{
+    background-color: green; 
+    color: black
+}
+#result,#reset{
+    width: 180px;
+    padding: 10px 0;
+    margin: 30px auto;
+    font-weight: 600;
+    border-radius: 20%;
+    letter-spacing: 0.5px;
+}
+#user_choice,
+#computer_choice{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+span{
+    font-weight: 600;
+}

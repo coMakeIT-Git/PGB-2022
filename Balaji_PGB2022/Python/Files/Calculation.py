@@ -21,9 +21,9 @@ def calculate(string):
         raise FormulaError("Input does not consists of three elements.")
     n1,op,n2=s
     if(not(number_check(n1))):
-        return "Invalid Input1"
+        return "Invalid Input"
     if (not (number_check(n2))):
-        return "Invalid Input2"
+        return "Invalid Input"
     if (not (operator_check(op))):
         return "Invalid Input"
     try:

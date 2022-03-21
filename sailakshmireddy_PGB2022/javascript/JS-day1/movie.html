@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+    <script src="movie.js"></script>
+    <div class="container1" id="movieReviewsContainer">
+    	<h1 class="mainhead">Movie Reviews</h1>
+        <div class="formE">
+            <label for="titleInput" class="movieE"> MOVIE TITLE </label>
+            <input type="text" id="titleInput" class="inputE1" placeholder="Enter a movie name" />
+            <label for="reviewTextarea" class="movieE"> Write Your Review</label>
+            <textarea class="textareaE" id="reviewTextarea" row="5" placeholder="Enter your review"></textarea>
+            <div>
+                <button class="buttonE" id="addBtn" onclick="onAddReview()"> Add</button>
+            </div>
+        </div>
+        <div id="reviewsContainer" class="reviewsContainerE"></div>
+    </div>
+</body>
+</html>

@@ -32,34 +32,34 @@ class calculator:
     def convert(self, f):
         try:
             self.a = float(f[0])
-            self.b = float(f[-1])
-            self.operator = f[1]
+            self.b = float(f[1])
         except:
             raise FormulaError("Invalid Formula")
 
-    def operator_check(self):
-        if re.fullmatch(regex, self.operator):
-            pass
-        else:
+    def operator_check(self, formula):
+        op_lst = re.findall(regex, formula)
+        if len(op_lst) > 1:
             raise FormulaError("Invalid Formula")
+
+        self.operator = op_lst[0]
 
 
     def calculate(self):
         while True:
             try:
-                formula = input("Enter Formula : ")
+                formula = input("Enter Formula >>> ")
 
                 if formula == "quit":
                     print("User Exit")
                     break
+                
+                self.operator_check(formula)
+                formula = re.split(regex, formula)
 
-                formula = formula.split()
-
-                if len(formula) < 3:
+                if len(formula) < 2:
                     raise FormulaError("Invalid Formula")
 
                 self.convert(formula)
-                self.operator_check()
 
                 print(self.op[self.operator](self.a, self.b))
             except Exception as e:
