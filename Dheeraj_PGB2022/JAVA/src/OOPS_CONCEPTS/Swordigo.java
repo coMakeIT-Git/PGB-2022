@@ -192,6 +192,7 @@ public class Swordigo extends MobileGame{
 		player1.skins.add(s3);
 		
 		// Aggregation
+		// Aggregation acknowledges that the two classes have their own life cycle (i.e. can exist without each other) Here Player and skin
 		System.out.println("Player '"+player1.getUserName()+"' Has Skin: \n");
 		s1.printDetails();
 		
