@@ -1,41 +1,41 @@
 package task1;
 import java.util.*;
 
-class Book {
+class penclass {
 
-    public String title;
+    public String type;
 
-    public String author;
+    public String brand;
 
-    Book(String title, String author)
+    penclass(String type, String brand)
 
     {
 
-        this.title = title;
+        this.type = type;
 
-        this.author = author;
+        this.brand = brand;
 
     }
 
 }
 
-class Library {
+class penstore {
 
-    private final List<Book> books;
+    private final List<penclass> pens;
 
-    Library(List<Book> books)
+    penstore(List<penclass> pens)
 
     {
 
-        this.books = books;
+        this.pens = pens;
 
     }
 
-    public List<Book> getListOfBooksInLibrary()
+    public List<penclass> getListOfpens()
 
     {
 
-        return books;
+        return pens;
 
     }
 
@@ -47,39 +47,39 @@ class composition {
 
     {
 
-        Book b1
+        penclass p1
 
-            = new Book("EffectiveJ Java", "Joshua Bloch");
+            = new penclass("ink pen", "cello");
 
-        Book b2
+        penclass p2
 
-            = new Book("Thinking in Java", "Bruce Eckel");
+            = new penclass("ball point pen", "parker");
 
-        Book b3 = new Book("Java: The Complete Reference",
+        penclass p3 = new penclass("ball point pen",
 
-                           "Herbert Schildt");
+                           "camlin");
 
-        List<Book> book = new ArrayList<Book>();
+        List<penclass> penclass = new ArrayList<penclass>();
 
-        book.add(b1);
+        penclass.add(p1);
 
-        book.add(b2);
+        penclass.add(p2);
 
-        book.add(b3);
+        penclass.add(p3);
 
-        Library library = new Library(book);
+        penstore penobj = new penstore(penclass);
 
-        List<Book> books
+        List<penclass> pens
 
-            = library.getListOfBooksInLibrary();
+            = penobj.getListOfpens();
 
-        for (Book bk : books) {
+        for (penclass ps : pens) {
 
-            System.out.println("Title : " + bk.title
+            System.out.println("Type : " + ps.type
 
                                + " and "
 
-                               + " Author : " + bk.author);
+                               + " Brand : " + ps.brand);
 
         }
 
