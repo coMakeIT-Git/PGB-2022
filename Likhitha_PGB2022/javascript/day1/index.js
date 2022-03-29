@@ -1,6 +1,7 @@
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
+var mp =new Map();
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -28,14 +29,30 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 // Create a new list item when clicking on the "Add" button
+
+var isAlpha = function(ch){
+  if ((ch >= "A" && ch <= "z") || (ch>='0' && ch<='9')){
+      return true
+  }
+
+}
+
+var regExp = /[a-zA-Z]/g;
+
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
+
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
-  } else {
+  } 
+  else if(!(regExp.test(inputValue))){
+    alert("You have to write valid test");
+  }
+    
+    else {
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
