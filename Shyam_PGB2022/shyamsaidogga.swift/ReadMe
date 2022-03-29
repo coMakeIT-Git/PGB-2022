@@ -1,0 +1,6 @@
+Steps to run this application on your device.
+***Only on MACOS and OSX***
+
+1) Install the XCode software on your MACOS system
+2) Open this file in XCode and using the simulator, tap on build option to build the application automatically.
+3) Play the challenge as per the application guidelines.
