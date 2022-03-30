@@ -1,0 +1,36 @@
+Abstraction
+
+running safely
+Gear=2
+Speed is 20
+Gear=2
+Speed is 15
+
+
+Inheritance
+
+running safely
+Gear=1
+Speed is 30
+Gear=1
+Speed is 20
+
+Polymorphism, Encapsulation
+
+gear is 0
+Speed is 0
+gear is 2
+Speed is 25
+
+
+Association, Aggregation 
+
+[Bike1@3764951d, Bike1@4b1210ee]
+Manideep
+
+Composition
+
+Gear of Bike is 20 Speed of Bike is 1
+Gear of Bike is 0 Speed of Bike is 1
+Gear of Bike is 30 Speed of Bike is 2
+
