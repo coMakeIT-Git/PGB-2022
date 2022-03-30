@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Mobile Navigation Bar</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <style>
+       
+        /* Navigation bar styling */
+        .menu-list {
+            max-width: 300px;
+            margin: auto;
+            height: 500px;
+            color: white;
+            background-color: palevioletred;
+            border-radius: 10px;
+        }
+       
+        /* logo, navigation menu styling */
+        .geeks {
+            overflow: hidden;
+            background-color: #111;
+            position: relative;
+        }
+       
+        /* styling navigation menu */
+        .geeks #menus {
+            display: none;
+        }
+       
+        /* link specific styling */
+        .geeks a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 16px;
+            font-size: 16px;
+            display: block;
+        }
+       
+        /* navigation toggle menu styling */
+        .geeks a.icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+       
+        /* hover effect on navigation logo and menu */
+        .geeks a:hover {
+            background-color: #ddd;
+            color:blue;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <div class="menu-list">
+ 
+        <!-- Logo and navigation menu -->
+        <div class="geeks">
+            <a href="#" class="">Programming Languages</a>
+            <div id="menus">
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi97bzV5sz2AhWMSWwGHbh4BRsQFnoECBgQAw&url=https%3A%2F%2Ffresh2refresh.com%2Fc-programming%2Fc-basic-program%2F&usg=AOvVaw1HNJZen_9-vOsD3MVclQ5v">c</a>
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiH08r65sz2AhV1SmwGHbZiCQcQFnoECBoQAw&url=https%3A%2F%2Fwww.tutorialspoint.com%2Fjava%2Fjava_basic_syntax.htm&usg=AOvVaw1PO_F7fxuTiYqzbXz1ogvO">java</a>
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPztST58z2AhXNSmwGHQiLBnEQFnoECAgQAQ&url=https%3A%2F%2Fwww.w3schools.com%2Fpython%2Fpython_intro.asp&usg=AOvVaw1R74wwZQRTB_vovQYy0RVg">python</a>
+                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiq092f58z2AhXqSmwGHc6TBawQFnoECBgQAw&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FLearn%2FGetting_started_with_the_web%2FJavaScript_basics&usg=AOvVaw0D7nLHEoTRYp5tIM43YEMB">javascript</a>
+ 
+            </div>
+ 
+            <!-- Bar icon for navigation -->
+            <a href="javascript:void(0);" class="icon"
+                    onclick="ProgrammingLanguages()">
+ 
+                <i onclick="myFunction(this)"
+                        class="fa fa-plus-circle">
+                </i>
+            </a>
+        </div>
+    </div>
+ 
+    <script>
+       
+        // Function to toggle the bar
+        function ProgrammingLanguages() {
+            var x = document.getElementById("menus");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+ 
+    <script>
+       
+        // Function to toggle the plus menu into minus
+        function myFunction(x) {
+            x.classList.toggle("fa-minus-circle");
+        }
+    </script>
+</body>
+ 
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Random Password </title>
+    <script>
+        function gen()
+        {
+           let l=document.getElementById("in").value;
+           let sa="abcdefghijklmnopqrstuvwxyz"
+           let la="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+           let n="0123456789"
+           let s="!@#$%^&*()"
+           let randomuppercount=Math.floor(Math.random()*(l-2)+2)
+           let randomdigitscount=Math.floor(Math.random()*(l-randomuppercount-1)+1)
+           let randomspecialcounts=Math.floor((Math.random()*(l-randomuppercount-randomdigitscount)+1))
+           let randomlowercount=l-randomspecialcounts-randomdigitscount-randomuppercount
+           console.log(randomdigitscount,randomlowercount,randomuppercount,randomspecialcounts)
+    let password=''
+    for(let i=0;i<randomuppercount;i++)
+    {
+        password+=la[Math.floor(Math.random()*la.length)];
+    }
+    for(let i=0;i<randomdigitscount;i++)
+    {
+        password+=n[Math.floor(Math.random()*n.length)];
+    }
+    for(let i=0;i<randomspecialcounts;i++)
+    {
+        password+=s[Math.floor(Math.random()*s.length)];
+    }
+    for(let i=0;i<randomlowercount;i++)
+    {
+        password+=sa[Math.floor(Math.random()*sa.length)];
+    }
+    let y=document.getElementById("r");
+    y.innerHTML=password;
+    }
+    </script>
+</head>
+<body>
+    <input id="in"type='input' style="margin:5%;" value="10"></input>
+    <input type="button" onclick="gen()" value="Generate Random Password"> </input>
+    <p id="r"></p>
+</body>
+</html>

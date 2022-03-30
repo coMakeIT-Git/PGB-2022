@@ -1,0 +1,88 @@
+-------------
+Data types output
+
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+
+['hi', 'hello', 'ram']
+<class 'list'>
+['hi', 'ravi', 'ram']
+('samkeer', 'aish', 'vaish')
+<class 'tuple'>
+{1, 2, 3, 4}
+<class 'set'>
+{1, 2, 3, 4, 5}
+{'john': 425, 'tom': 212, 'rina': 325}
+<class 'dict'>
+{'john': 500, 'tom': 212, 'rina': 325}
+------------------
+implict type conversion 10.5
+explicit type conversion 100
+100
+100
+100
+
+combined using int and str + operator python10
+combined boolean and string using + operator javaTrue
+combined list and tuple using + operator ['vedanth', 'vivek', 'sai', 3.5, 'lucky', 'annie', 'riya']
+-----------------------------
+list operations:
+
+Please enter a fruit name to add:
+watermelon
+list after adding element ['apple', 'banana', 'cherry', 'watermelon']
+copying elements of list ['apple', 'banana', 'cherry', 'watermelon']
+REmoving all elements from fruits list None
+count of cherry 1
+adding cars to list ['apple', 'banana', 'cherry', 'watermelon', 'Ford', 'BMW', 'Volvo']
+position of cherry  2
+adding orange at second position ['apple', 'orange', 'banana', 'cherry', 'watermelon']
+removing banana element from list ['apple', 'orange', 'cherry', 'watermelon']
+reverse list ['watermelon', 'cherry', 'orange', 'apple']
+sort the cars list ['BMW', 'Ford', 'Volvo']
+
+-----------------------------------------
+
+String operations:
+
+Converted to uppercase: NALLA SAIKEERTHANA
+Converted to lowecase: nalla saikeerthana
+Number of substring occurrences: 1
+String ends with a: True
+Converting first letter of each word to uppercase: Nalla Saikeerthana
+Convertuing first character to capital letter: Nalla saikeerthana
+Character a occured at : 6 position
+Reverse string using slicing: anahtreekias allan
+
+------------------------------------------
+set operations:
+element abc occured: 2
+element abc occured at position: 1
+-----------------------------------------
+dictionary opeartions:
+
+{'key1': 5, 'key2': 5, 'key3': 5}
+value of reethu: 20
+Keyvalue pairs are: {'reethu': 20, 'lucky': 30, 'dimple': 50, 'riya': 70}
+Dictionary after removing element {'lucky': 30, 'dimple': 50, 'riya': 70}
+Dictionary after removing last inserted keyvalue pair {'lucky': 30, 'dimple': 50}
+------------------------------------------
+sets operations:
+
+set after adding element 5: {1, 2, 3, 4, 5}
+set after removing element 4: {1, 2, 3, 5}
+Elements that exist in x but not in y are: {3, 4, 5}
+Sets after removing common elements :
+{3, 4, 5}
+set()
+no items in set x is present in set y False
+all items in set x are present in set y False
+items set y are present in set x: True
+set that contains all items from both sets, except items that are present in both sets: {3, 4, 5}
+Remove the items that are present in both sets, AND insert the items that is not present in both sets None
+a set that contains all items from both sets, duplicates are excluded: {1, 2, 3, 4, 5, 6}
+Insert the items from set y into set x None
+
+---------------------------

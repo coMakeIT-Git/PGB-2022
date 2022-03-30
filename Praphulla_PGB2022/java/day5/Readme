@@ -1,0 +1,39 @@
+OUTPUT:(THREAD POOL.JAVA)
+------------------------------------------------------------------------------------------------
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day5$ javac ThreadPool.java 
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day5$ java ThreadPool 
+Thread is running: Reference to a static method
+The details of the employee are:praphulla 1 13 
+The details of the employee are:chaitra 2 14 
+The details of the employee are:shyam 3 14 
+The details of the employee are:vinay 4 13 
+Submitted all the tasks!
+welcome to the class Employee!Your assigned id is: CMIT-1072
+welcome to the class Employee!Your assigned id is: 1
+Reference to a Static method: Msg: Uploading file:Praphulla.java
+false
+Reference to a Static method: Msg: Resources Downloaded.
+Creating and Testing a Supplier:0.9281328553024043
+-------------------------------------------------------------------------------------------------
+OUTPUT:(STREAMSDEMO.JAVA)
+-------------------------------------------------------------------------------------------------
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day5$ javac StreamsDemo.java 
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/java/day5$ java StreamsDemo
+Printing Prime and Composite numbers(using map):
+55
+96
+65
+61
+53
+20
+13
+11
+5
+93
+The Primes less than 25 are(using filter):
+13
+11
+5
+The prime numbers in the given input are(using sort):[61, 53, 13, 11, 5]
+The reduced value is(using reduce): 472
+--------------------------------------------------------------------------------------------------

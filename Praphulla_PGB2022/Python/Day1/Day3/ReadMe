@@ -1,0 +1,153 @@
+Output:**Vehicle.py**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/Vehicle.py
+
+ Class Taxi:
+
+ Max Speed =	 90 
+ Mileage =	 30 
+ Maximum Seating Capacity=	 6
+
+ Type:		 Taxi 
+ Company:	 Ford
+
+ **Details**:
+ Model:	 Crown Victoria 
+ Color:	 Red 
+ Year of manufacture:	 1980s
+
+The seating capacity of vehicle is: 4
+Total Taxi fare is: 40
+
+ Class Car:
+
+ Type:		 Car 
+ Company:	  Audi
+
+ Car Type:	 Cabriolet
+
+ **Details**:
+ Model:	 A3 
+ Color:	 White 
+ Year of manufacture:	 2020s
+
+The seating capacity of vehicle is: 4
+Total Car Rent per day is: 4040.0
+
+ Class Bus:
+
+ Type:		 Bus 
+ Company:	  Tata
+
+ Bus Type:	 Private
+
+ **Details**:
+ Model:	 Marcopolo 
+ Color:	 Silver 
+ Year of manufacture:	 2020s
+
+The seating capacity of vehicle is: 20
+Total Bus fare is: 220.0
+
+Process finished with exit code 0
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Output: **Time.py**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/Time.py
+
+ **Time:** 
+ Hours:	 16 
+ Minutes:	 10
+
+ Displaying Minutes:	 970
+
+ Enter time in 00hrs:00min Format: 10 30
+
+ Enter time in 00hrs:00min Format:12 20
+
+ **Time:** 
+ Hours:	 22 
+ Minutes:	 50
+
+ Displaying Minutes:	 1370
+------------------------------------------------------------------------------------------------------------------------------------------------
+output **Target.py**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/TargetSum.py
+index1=0, index2=1
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+output:**ZeroSum**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/ZeroSum.py
+
+ The given array is: [-25, -10, -7, -3, 2, 4, 8, 10]
+[ -10 2 8 ]
+[ -7 -3 10 ]
+
+ Enter a List: 5 0 -2 -3 4  -1 -3 9 -7 2 
+[ 5 -2 -3 ]
+[ 5 -2 -3 ]
+[ 5 -7 2 ]
+[ 0 -2 2 ]
+[ -2 9 -7 ]
+[ -3 4 -1 ]
+[ 4 -1 -3 ]
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+output: **Student**
+ object 'stu' is an instance of Class Student: True
+
+ object 'stu' is an instance of Class Object: True
+
+ object 'marks' is an instance of Class Marks: True
+
+ object 'marks' is an instance of Class Object: True
+
+ object 'marks' is an instance of Class Student: False
+
+ object 'stu' is an instance of Class Marks: False
+
+Process finished with exit code 0
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+output:**TupleSort.py**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/TupleSort.py
+
+ List of Subjects and respective Marks:
+[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+
+ Sorting the List of Tuples based on the Marks:
+[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+output:**DictSort.py**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/DictSort.y.py
+[{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+
+Sorting the List of dictionaries :
+[{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}]
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+output:**tuptoStr**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/TuptoStr.py
+
+ List of colors:
+[('red', 'pink'), ('white', 'black'), ('orange', 'green')]
+
+ Converting List of Tuples into a List of Strings:
+['red pink', 'white black', 'orange green']
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+output:**Generator.py**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/Generator.py
+10 9 8 7 6 5 4 3 2 1 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+output:**AbstractDemo**
+/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/bin/python /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day3/AbstractDemo.py
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,115 @@
+1. UserData.py
+
+***Tuples of data***
+[('HarryPotter', 'harry@gmail.com', 20), ('LunaLovegood', 'luna@gmail.com', 10), ('HarryPotter', 'harry@gmail.com', 20), ('TeddyBear', 'teddy@yahoo.com', 20), ('HermioneGranger', 'hermione@hotmail.com', 21), ('GinnyWeasley', 'ginny@gmail.com', 0), ('RonWeasley', 'ron@gmail.com', -4), ('RemusLupin', 'remusgmail.com', 30)]
+
+Invalid Age at - U: LunaLovegood   A: 10
+Error: Age must be greater than 16!
+
+User Name not unique at:  HarryPotter
+Error: User Name must be unique!
+
+Invalid Age at - U: GinnyWeasley   A: 0
+Error: Enter a positive value for age!
+
+Invalid Age at - U: RonWeasley   A: -4
+Error: Enter a positive value for age!
+
+Invalid Email at - U: RemusLupin   E: remusgmail.com
+Error: Enter a valid email address!
+
+***Valid Data Inserted into Dictionary***
+ {'HarryPotter': 'harry@gmail.com', 'TeddyBear': 'teddy@yahoo.com', 'HermioneGranger': 'hermione@hotmail.com'}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+2. Calculator.py
+
+Enter Formula (Type "quit" to exit): 6 7
+Error: Enter 3 arguments!
+
+Enter Formula (Type "quit" to exit): 6 & 7
+Error: Enter either + or - in the middle!
+
+Enter Formula (Type "quit" to exit): 6 + 7
+Result:  13.0
+
+Enter Formula (Type "quit" to exit): 6 - 7
+Result:  -1.0
+
+Enter Formula (Type "quit" to exit): u + 8
+Error: The first and last arguments must be numbers!
+
+Enter Formula (Type "quit" to exit): quit
+
+---------------------------------------------------------------------------------------------------------------------------
+
+3. Words.py
+
+Enter File Name: TextFile
+Word Count of TextFile :  9
+
+---------------------------------------------------------------------------------------------------------------------------
+
+4. RemoveNewLine.py
+
+Enter File Name: NewLineFile
+
+***Old Data***
+Hello!
+
+
+I am Chaitra Mudili.
+
+
+Welcome to CoMakeIT!
+
+
+***Updated Data***
+Hello!I am Chaitra Mudili.Welcome to CoMakeIT!
+
+---------------------------------------------------------------------------------------------------------------------------
+
+5. Copy.py
+
+Enter Source File Name: NewLineFile
+Enter Destination File Name: NewLineFile
+
+The file already exists. 
+Do you want to replace it (y/n)?: n
+
+Enter New Destination File Name: CopyText
+Copied successfully!
+
+---------------------------------------------------------------------------------------------------------------------------
+
+6. CSVFiles.py
+
+Number of rows:  6
+
+***Fields***
+['Username', ' Identifier', 'First name', 'Last name']
+
+---------------------------------------------------------------------------------------------------------------------------
+
+7. Hash.py
+
+Enter File Name: Matter
+N#a#t#u#r#e# #i#s# #a#n# #i#m#p#o#r#t#a#n#t# #a#n#d# #i#n#t#e#g#r#a#l# #p#a#r#t# #o#f# #m#a#n#k#i#n#d#.# #I#t# #i#s# #o#n#e# #o#f# #t#h#e# #g#r#e#a#t#e#s#t# #b#l#e#s#s#i#n#g#s# #f#o#r# #h#u#m#a#n# #l#i#f#e#;# #h#o#w#e#v#e#r#,# #n#o#w#a#d#a#y#s# #h#u#m#a#n#s# #f#a#i#l# #t#o# #r#e#c#o#g#n#i#z#e# #i#t# #a#s# #o#n#e#.# #N#a#t#u#r#e# #h#a#s# #b#e#e#n# #a#n# #i#n#s#p#i#r#a#t#i#o#n# #f#o#r# #n#u#m#e#r#o#u#s# #p#o#e#t#s#,# #w#r#i#t#e#r#s#,# #a#r#t#i#s#t#s# #a#n#d# #m#o#r#e# #o#f# #y#e#s#t#e#r#y#e#a#r#s#.# #T#h#i#s# #r#e#m#a#r#k#a#b#l#e# #c#r#e#a#t#i#o#n# #i#n#s#p#i#r#e#d# #t#h#e#m# #t#o# #w#r#i#t#e# #p#o#e#m#s# #a#n#d# #s#t#o#r#i#e#s# #i#n# #t#h#e# #g#l#o#r#y# #o#f# #i#t#.# #T#h#e#y# #t#r#u#l#y# #v#a#l#u#e#d# #n#a#t#u#r#e# #w#h#i#c#h# #r#e#f#l#e#c#t#s# #i#n# #t#h#e#i#r# #w#o#r#k#s# #e#v#e#n# #t#o#d#a#y#.# #
+#
+
+---------------------------------------------------------------------------------------------------------------------------
+
+8. HandleExceptions.py
+
+Note: Handles each Exception accordingly
+
+Error: Division by zero is undefined!
+Error: Improper Indentation
+Error: Package not found
+Error: Index out of bounds
+Error: Invalid Value
+
+Error: Unknown Exception
+
+---------------------------------------------------------------------------------------------------------------------------

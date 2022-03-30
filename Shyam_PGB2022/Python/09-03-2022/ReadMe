@@ -1,0 +1,106 @@
+Outputs for 1,2,3,4:
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/main.py
+--------------------------------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/main.py", line 39, in <module>
+    q[0] = "SHy"
+TypeError: 'str' object does not support item assignment
+----------------
+Traceback (most recent call last):
+  File "/home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/main.py", line 38, in <module>
+    l[1] = "PenDrive"
+TypeError: 'tuple' object does not support item assignment
+----------------
+21
+Shyam sai Dogga
+16.75
+(2+3j)
+['Mouse', 'Keyboard', 'Console']
+('Mouse', 'Keyboard', 'Console')
+91
+{'name': 'Shyam sai Dogga', 'CMIT.No': 'CMI-T1097'}
+{'Console', 'Keyboard', 'Mouse'}
+frozenset({'Console', 'Keyboard', 'Mouse'})
+True
+b'Shyam'
+bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00')
+Lists are mutable:
+['PenDrive', 'Keyboard', 'Console']
+Sets are mutable:
+{'2', 'Console', 'Keyboard', 'Mouse'}
+Dictionaries are mutable:
+{'name': 'coMakeIT', 'CMIT.No': 'CMI-T1097'}
+The rest all are immutable (ie.., Tuples,Sets etc: )
+----------------------------------------------------------------------------------------------------------------------------
+Outputs for 5: #Concat
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/concat.py
+(('CMIT', 1079), 21, 'Hyderabad', 'Shyam', 'sai', 'Dogga') #Concatenated tuple and list using'+' operator
+Age is 21
+Age is 21 #String and int
+Age is True
+Age is True #Strng and boolean
+----------------------------------------------------------------------------------------------------------------------------
+Outputs for 6 #lists:
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/list.py
+['apple', 'banana', 'cherry', 'Berry']    #Added element 
+['apple', 'banana', 'cherry', 'Berry']
+2
+['apple', 'banana', 'cherry', 'Berry', 'cherry', 'Ford', 'BMW', 'Volvo']
+6
+['apple', 'banana', 'Berry', 'cherry', 'Ford', 'BMW', 'Volvo']
+['apple', 'Berry', 'cherry', 'Ford', 'BMW', 'Volvo']
+['Volvo', 'BMW', 'Ford', 'cherry', 'Berry', 'apple']
+['BMW', 'Ford', 'Volvo']
+
+-----------------------------------------------------------------------------------------------------------------------------
+Output for 7 #String:
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/string.py
+SHYAM SAI DOGGA #uppercase converted
+shyam sai dogga #lowercase converted
+3 #count the occurences of specific character
+True #check endswith 
+False #isalpha() check
+Shyam sai dogga #capitalize usage for first letter
+Shyam Sai Dogga #title usage for each word first letter
+3 #return index position for find 
+aggoD ias mayhS #use slicing to reverse
+
+-----------------------------------------------------------------------------------------------------------------------------
+Output for 8 #tuple:
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/tuple.py
+2 #count specific element in tuple
+3 #return index position in tuple
+
+-----------------------------------------------------------------------------------------------------------------------------
+Output for 9,10 #dictionaries:
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/keys.py
+{'k1': '5', 'k2': '5', 'k3': '5'}   #Same value for different keys
+{'FirstName': 'Shyam', 'MiddleName': 'sai', 'LastName': 'Dogga', 'Age': 21} #print all key value pairs
+Shyam #return value for specific element
+{'FirstName': 'Shyam', 'LastName': 'Dogga', 'Age': 21} #remove element through key
+{'FirstName': 'Shyam', 'LastName': 'Dogga'} #pop the last entry
+
+-----------------------------------------------------------------------------------------------------------------------------
+Output for 11 #sets
+
+/home/localadmin/PGB-2022/Shyam_PGB2022/Python/bin/python /home/localadmin/PGB-2022/Shyam_PGB2022/Python/src/sets.py
+{'Acc.2022', 'CMI-T1079', 21, 'Shyam sai Dogga'}
+{'Cricket', 21, 'Shyam sai Dogga', 'FootBall', 'Acc.2022', 'CMI-T1079', 'Sport'}
+{1, 2}
+{6}
+{3, 4, 5}
+False
+{1, 2, 6}
+False
+False
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2}
+-----------------------------------------------------------------------------------------------------------------------------
+

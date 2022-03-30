@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Form Validation</title>
+  
+  <style>
+    table{
+      height:400px;
+      width:400px;
+      border: 1px solid black;
+      border-collapse: collapse;
+      background-color: #eae9fc;
+      font-family: "Garamond";
+    }
+    
+    h2{
+    	color:#4f568a;
+    }
+    td{
+      padding:15px;
+    }
+    
+    body {
+      background-image: url("/home/localadmin/PGB-2022/Chaitra_PGB2022/JavaScript/Day 10/index.jpg");
+       background-repeat: no-repeat;
+  	background-size: cover;
+    }
+    
+    input[type=button], input[type=submit], input[type=reset] {
+      background-color: #4f568a;
+      border: none;
+      color: white;
+      padding: 16px 32px; 
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+  
+<body>
+  </br>
+  <h2 align="center">User Details</h2>
+  </br>
+  </br>
+  </br>
+  </br>
+  <form id="userDetails" name="userDetails" action="#" onsubmit="return validate()" method="post"> 
+    <table align="center">
+      <tr>
+        <td>Name: </td>
+        <td><input type=text name="Name"/></td>
+      </tr>
+      <tr>
+        <td>Gender: </td>
+        <td><input type="radio" name="g" value="m"/>Male
+        </br>
+        <input type="radio" name="g" value="f"/>Female</td>     
+      </tr>
+      <tr>
+        <td>Age: </td>
+        <td><input type=text name="age"/></td>
+      </tr>
+      <tr>
+        <td>Pincode: </td>
+        <td><input type=text name="Zip"/></td>
+      </tr>
+      <tr>
+        <td>Country: </td>
+        <td>
+          <select name="Country">
+            <option value="-1" selected>Choose your country</option>
+            <option value="in">India</option>
+            <option value="us">USA</option>
+            <option value="ca">Canada</option>
+            <option value="au">Australia</option>
+            <option value="eu">Europe</option>
+        </td>
+      </tr>
+      <tr>
+        <td colspan=2><div style="text-align:center;"><input type="submit" value="SUBMIT"/></div></td>     
+      </tr>
+      <tr>
+        <td colspan=2><span id="res"></span></td>
+      </tr>
+    </table>   
+  </form>
+</body>
+
+
+<script type = "text/javascript">  
+      function validate() {
+        
+        if(document.userDetails.Name.value == "" ) {
+            alert("Please provide your name!");
+            document.userDetails.Name.focus() ;
+            return false;
+         } 
+        if( document.userDetails.g.value == "" ) {
+            alert( "Please provide your gender!" );
+            //document.userDetails.g.focus() ;
+            return false;
+         } 
+         if(document.userDetails.age.value < 18 ) {
+            alert("Age must be greater than 18!");
+            document.userDetails.age.focus() ;
+            return false;
+         } 
+        if( document.userDetails.Zip.value == "" || isNaN( document.userDetails.Zip.value ) ||
+            document.userDetails.Zip.value.length != 5 ) {           
+            alert( "Please provide a zip in the format #####." );
+            document.userDetails.Zip.focus() ;
+            return false;
+         }
+         
+        if(document.userDetails.Country.value == "-1") {
+            alert("Please provide your country!");
+            return false;
+         }
+        
+        alert("Form submitted successfully!");       
+        return(true);
+      }
+</script>
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

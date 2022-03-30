@@ -1,0 +1,105 @@
+----------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/Alphanumerics.py
+['Sriman25', 'scientist50']
+
+Process finished with exit code 0
+----------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/DateModule.py
+
+ After converting data_string to Date Format: 2022-03-09 11:20:00
+
+ Date 4 months from today is: 2022-07-10
+----------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/Employee.py
+Details of the employee:
+
+ Employee Name: Praphulla 
+ Employee Id: CMIT-1072 
+ Employee Salary: 9000
+
+ Employee Name: Luna 
+ Employee Id: CMIT-1053 
+ Employee Salary: 10000
+----------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/FunctionDemo.py
+
+Enter a number 'a': 2
+
+Enter a number 'b':3
+
+The Sum is: 5 
+The difference is: -1
+The sum and difference: (7, 3)
+
+Process finished with exit code 0
+------------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/InnerFunctions.py
+Enter two Numbers: 2 3
+Sum :  10
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/ListMax.py
+Largest element is: 72
+
+Process finished with exit code 0
+---------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/Pattern.py
+
+ Reverse Triangular Pattern:
+5 4 3 2 1 
+4 3 2 1 
+3 2 1 
+2 1 
+1 
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/RandomModule.py
+
+ Your One Time Password is: 1397
+
+ Generating 6 digit random OTP 328143
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/Recursion.py
+
+ The Sum is: 55
+
+ The Sum is: 21
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/SpecialCharacters.py
+
+ Digits in the string are: 2022
+
+Process finished with exit code 0
+----------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/SpecialSymbols.py
+We are le@arning python@67 fun_da**mentals*
+We are learning python67 fundamentals
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/StringCount.py
+
+ Printing the string: Praphulla1002#$dhhjhd
+Alphabets: 15
+Numbers: 4
+Special characters: 2
+
+Process finished with exit code 0
+----------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/Strings.py
+H5e4l3l2o1yhpaR
+
+Process finished with exit code 0
+-------------------------------------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day2/StrongPassword.py
+
+ Generating a Strong password: Sz;h4qx,7K
+
+Process finished with exit code 0
+--------------------------------------------------------------------------------------------------------

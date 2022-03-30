@@ -1,11 +1,16 @@
 package day2;
+
 public class Student {
 
-	int rollno;
-	String name;
+	public int rollno;
+	public String name;
 	int marks;
 	int rank;
-	Student(int rollno,String name,int marks,int rank){
+	public Student(int rollno,String name){
+		this.rollno=rollno;
+		this.name=name;
+	}
+	public Student(int rollno,String name,int marks,int rank){
 		this.rollno=rollno;
 		this.marks=marks;
 		this.rank=rank;

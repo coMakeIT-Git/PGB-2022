@@ -1,0 +1,18 @@
+"""
+Write a generator function which takes an integer n as a parameter.
+The function should return a generator which counts down from n to 0.
+Test your function using a for loop.
+
+"""
+
+
+def mygen(n):
+    while(n>0):
+        yield n
+        n-=1
+print("Printing numbers generated using generator with  for loop:")
+for item in mygen(10):
+    print(item)
+
+
+

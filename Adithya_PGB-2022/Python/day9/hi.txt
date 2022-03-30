@@ -1,0 +1,2 @@
+check filename is already exists or not
+if it already exists asks to choose new name

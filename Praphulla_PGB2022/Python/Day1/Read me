@@ -1,0 +1,188 @@
+output:
+-------------------------------------------------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day1/dataStuctures.py
+
+Numeric DataTypes in Python:
+
+Type of var1:  <class 'int'>
+
+Type of var2:  <class 'float'>
+
+Type of var3:  <class 'complex'>
+
+Sequence DataTypes in Python:
+
+
+ Printing Message: I'm Praphulla
+
+Type of String <class 'str'>
+
+ Checking String immutability:
+
+ Exception occurred, Strings are immutable!
+
+ Printing Result:  (('CMIT', 1072), 20, 'Hyderabad', 'Praphulla', 'Gumma')
+Age is 21
+Age is 21
+Age is True
+Age is True
+
+ Python List Operations:
+
+ Initialising a blank List:  []
+
+ Printing a List with the use of a String:  ['Hello! Praphulla']
+
+ Printing a List containing multiple values:  ['I', 'am', 'Luna']
+
+ Printing First Element: I
+
+ Printing First Element: Luna
+
+ Printing Multi-Dimensional List:  [['I', 'am'], ['Luna', 'Lovegood']]
+
+ Printing the first item of the List ['I', 'am']
+
+ Printing the third item of the List ['Luna', 'Lovegood']
+
+ Accessing element using negative indexing: ['Luna', 'Lovegood'] ['I', 'am']
+
+ Python Tuples Operations:
+
+ Initial empty Tuple:  ()
+
+ Checking Tuple immutability:
+
+ exception caught, Tuples are immutable.
+
+ Tuple with the use of String:  ('Hello!', 'Welcome!')
+
+ Tuple using List: 
+(1, 2, 4, 5, 6)
+
+ Tuple with the use of function:  ('H', 'a', 'r', 'r', 'y', 'P', 'o', 't', 't', 'e', 'r')
+
+ Tuple with nested tuples:  ((0, 1, 2, 3), ('python', 'Test'))
+
+ Boolean DataType in Python:
+<class 'bool'>
+<class 'bool'>
+
+ List Operations Example:
+
+ After adding new fruits:
+
+ List Items:  ['apple', 'banana', 'cherry', 'mango', 'orange']
+
+ After performing Insert Operation on Fruits:  ['apple', 'banana', 'berry', 'cherry', 'mango', 'orange']
+
+ Initial List:  ['apple', 'banana', 'berry', 'cherry', 'mango', 'orange']
+
+ List after Removal of two elements:  None None
+
+ List after Removing all the elements:  None
+
+ Copying contents of fruits to fruits1 []
+
+ Appending elements to the list fruits1 None None None None None ['raspberry', 'cherry', 'blueberry', 'cherry', 'banana']
+
+ The total number of occurrences of the word cherry: 2
+
+ Printing the elements of the List Car: ['Ford', 'BMW', 'Volvo']
+
+ Adding two lists Fruits1 and Cars..
+
+ Mixed: ['raspberry', 'cherry', 'blueberry', 'cherry', 'banana', 'Ford', 'BMW', 'Volvo']
+
+ Position value of cherry 1
+
+ Inserting orange as the second element: None ['raspberry', 'orange', 'cherry', 'blueberry', 'cherry', 'banana', 'Ford', 'BMW', 'Volvo']
+
+ Removing second element of the list fruits1: orange ['raspberry', 'cherry', 'blueberry', 'cherry', 'banana', 'Ford', 'BMW', 'Volvo']
+
+ Removing Banana from the list None ['raspberry', 'cherry', 'blueberry', 'cherry', 'Ford', 'BMW', 'Volvo']
+
+ Reversing the elements in the list fruits1: None ['Volvo', 'BMW', 'Ford', 'cherry', 'blueberry', 'cherry', 'raspberry']
+
+ Sorting the elements in the list fruits1: None ['BMW', 'Ford', 'Volvo', 'blueberry', 'cherry', 'cherry', 'raspberry']
+
+ Python String Operations:
+
+ Input String: heLlo world1
+
+ Converting to upper case HELLO WORLD1
+
+ Converting to lower case hello world1
+
+ The number of times 'l' occurs in the string: 2
+
+ The string ends with 'd'  False
+
+ Whether the string contains all alphabets False
+
+ Capitalising th first letter: heLlo world1 Hello world1
+
+ Converting the first character of each word to upper case heLlo world1 Hello World1
+
+ Searching the string for a specified value and returns the position of where it was found heLlo world1 6
+
+ Revering the string with slicing 1dlrow olLeh heLlo world1
+
+ Python Tuples Operations:
+
+ Return the number of times 'Hi' occurs in a tuple 2
+
+ Searching the tuple for 'Hello' and returns the position of where it was found 1
+
+ Python Dictionary Operations
+{'Espresso': 'coffee', 'Capuccino': 'coffee', 'Americano': 'coffee'}
+
+ A dictionary with 3 different keys, all with the value '5': {'Praph': 5, 'Raphy': 5, 'Luna': 5}
+
+ Return the value of the specified key in a Dictionary: None
+
+ Print all key, value pairs  dict_items([('Espresso', 'coffee'), ('Capuccino', 'coffee'), ('Americano', 'coffee')])
+
+ Removing elements from a particular position: coffee {'Espresso': 'coffee', 'Capuccino': 'coffee'}
+
+ Removing the last inserted key-value pair: ('Capuccino', 'coffee') {'Espresso': 'coffee'}
+
+ Python Set Operations:
+
+ Printing set of elements: {'birds', 'animals', 'reptiles'}
+
+ Adding an element to a set: None {'birds', 'humans', 'animals', 'reptiles'}
+
+ Removing a specific element: None {'birds', 'humans', 'reptiles'}
+<class 'set'>
+
+ Return a set that contains the items that only exist in set x, and not in set y set()
+
+ Adding an element to the set: None {(1, 2, 3, 4, 5, 6, 7, 8), 11}
+
+ updating set x None {(1, 2, 3, 4, 5, 6, 7, 8), 11, (2, 4, 6, 8, 10)}
+
+ Discarding an element from the set: None
+
+ Set Difference: {1, 2}
+
+ Set Difference: {6}
+
+ Set Intersection: {3, 4, 5}
+
+ Checking if two sets are disjoint: False
+
+ Whether there is a symmetric difference: {1, 2, 6}
+
+ Super set: False
+
+ Sub set: False
+
+ Set Union {1, 2, 3, 4, 5, 6}
+
+ Set Update: None {1, 2, 3, 4, 5, 6}
+
+ symmetric_difference_update None {1, 2}
+
+Process finished with exit code 0
+

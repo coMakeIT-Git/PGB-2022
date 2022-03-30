@@ -1,0 +1,59 @@
+-------------------
+Thread pool 
+
+Display : Task 1
+Display : Task 2
+Display : Task 3
+Running : Task 1
+Running : Task 2
+Running : Task 3
+-------------------
+
+Synchronised block and method
+
+5
+10
+2
+4
+10
+20
+6
+15
+30
+20
+25
+100
+200
+300
+400
+500
+
+----------------------
+
+Method refernces
+
+Hello, this is static method.
+Hello, this is non-static method.
+Hello, this is non-static method.
+Hello
+
+----------------------
+
+Stream outputs:
+
+Enter the number of elements:
+4
+Enter the elements of the array: 
+
+1 4 6 7
+Print the prime numbers using map.stream()
+[1, 7]
+Printing prime numbers less than 25 using stream.filter()
+1
+7
+Printing array numbers in descending order
+[7, 6, 4, 1]
+Using reduce to add all integers
+18
+
+-------------------------

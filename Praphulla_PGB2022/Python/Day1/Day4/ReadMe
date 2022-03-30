@@ -1,0 +1,174 @@
+Output: Calclulator.py
+--------------------------
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/Calclulator.py
+Enter expression in the given format is a  op  b
+$ 4 + 6
+10.0
+Enter expression in the given format is a  op  b
+$ a + 7
+Float to str
+Enter expression in the given format is a  op  b
+$ 3 9
+Less than 3
+Enter expression in the given format is a  op  b
+$  4 * 5
+Error: Enter either + or - in the middle!
+Enter expression in the given format is a  op  b
+------------------------------------------------------------
+output: customException.u
+usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/customEx.py
+
+ Invalid Email at - U: HarveySpecter   E: harveyspectergmail.com
+Error: Enter a valid email address!
+
+ Invalid Age at : DonnaPaulsen   A: 10
+Error: Age must be greater than 16!
+
+ User Name not unique at:  MikeRoss
+Error: User Name must be unique!
+
+ Invalid Age at : JessicaPearson   A: -56
+Error: Enter a positive value for age!
+
+***Valid Data Inserted into Dictionary***
+ {'MikeRoss': 'mikeross@gmail.com', 'RachelZane': 'rachelzane@gmail.com', 'LouisLitt': 'louislitt@gmail.com'}
+
+Process finished with exit code 0
+------------------------------------------------------------
+output: WordCount.py
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/WordCount.py
+
+ Enter a valid file name in the format 'filename.txt': words.txt
+	 Salut! Bonjour cavabien bonnenuit. Created for demonstating WordCount.
+
+
+ Number of words in the given file are: 9
+
+Process finished with exit code 0
+------------------------------------------------------------
+output:newLine.py
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/NewLineChar.py
+
+ Enter a valid file name in the format 'filename.txt': newline.txt
+['Salut!!!!', '', '', 'Bonjour!!', '', 'je suis Praphulla', '', 'Enchante', '', 'Bonne nuit!!', '', '', 'Adios!']
+
+Process finished with exit code 0
+------------------------------------------------------------
+output: CopyFile.py
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/FileCopy.py
+
+ Enter the name of the Source File: source.py
+
+ The file doesn't exist!
+
+Process finished with exit code 0
+
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/FileCopy.py
+
+ Enter the name of the Source File: source.txt
+
+ Enter the name of the Target File: target.txt
+
+ Content of "hello praphulla
+" gets Copied to "target.txt" Successfully!
+
+ Displaying contents of the filetarget.txt 	hello praphulla
+ 
+ ------------------------------------------------------------
+
+ output csvFile.py
+ /usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/CsvFile.py
+['Praphulla Gumma,CSE,553\n', 'Lakshmi Gumma,ECE,534\n']
+
+Process finished with exit code 0
+-------------------------------------------------------------
+output: hash.py
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/Hash.py
+
+ *Inside hash_display method*
+<_io.TextIOWrapper name='hash_file.txt' mode='r' encoding='UTF-8'>
+	 Hello I am a Hash File.
+
+
+ **After adding of Hash symbols**
+H#e#l#l#o# #I# #a#m# #a# #H#a#s#h# #F#i#l#e#.#
+#
+Process finished with exit code 0
+---------------------------------------------------------------
+output Exceptions.py
+/usr/bin/python3.8 /home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/Exceptions.py
+
+MAIN MENU
+1. ZeroDivisionError
+2. ValueError
+3. IndentationError
+4. IndexError
+5. ImportError
+6. CustomException
+5. Exit
+Enter the Choice 1
+3
+0
+ can't be zero
+This is always executed
+
+MAIN MENU
+1. ZeroDivisionError
+2. ValueError
+3. IndentationError
+4. IndexError
+5. ImportError
+6. CustomException
+5. Exit
+Enter the Choice 2
+Account balance is low
+
+MAIN MENU
+1. ZeroDivisionError
+2. ValueError
+3. IndentationError
+4. IndexError
+5. ImportError
+6. CustomException
+5. Exit
+Enter the Choice 3
+
+MAIN MENU
+1. ZeroDivisionError
+2. ValueError
+3. IndentationError
+4. IndexError
+5. ImportError
+6. CustomException
+5. Exit
+Enter the Choice
+6
+MAIN MENU
+1. ZeroDivisionError
+2. ValueError
+3. IndentationError
+4. IndexError
+5. ImportError
+6. CustomException
+5. Exit
+Enter the Choice 6
+Enter a number:  9865
+This is Custom Exception
+
+MAIN MENU
+1. ZeroDivisionError
+2. ValueError
+3. IndentationError
+4. IndexError
+5. ImportError
+6. CustomException
+5. Exit
+Enter the Choice5
+Traceback (most recent call last):
+  File "/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/Exceptions.py", line 84, in <module>
+    Exceptions.ImportError()
+  File "/home/localadmin/PGB-2022/PGB-2022/Praphulla_PGB2022/Python/Day4/Exceptions.py", line 50, in ImportError
+    print(sys.version)
+NameError: name 'sys' is not defined
+
+Process finished with exit code 1

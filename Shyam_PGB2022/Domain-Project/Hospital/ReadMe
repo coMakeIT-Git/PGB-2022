@@ -1,0 +1,192 @@
+//PRINCIPLE OF COMPOSITION IS ACHIEVED HERE 
+//If we delete the list of office then the entries of its branch details are also deleted(tightly-packed). 
+We Are Here Hospitals Branches: 
+Name : WAHH-Main and its  Address : F.No: 504, Banglore
+Name : WAHH-Cardio and its  Address : F.No: 1-24-35, Gurgaon
+Name : WAHH-Ortho and its  Address : F.No: 50-6-76, Hyderabad
+--------------------------------------------------
+-->>HOSPITAL-->>
+---------------------------------------------------
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+1
+-------->>GIVEN DETAILS ARE SHOWN BELOW--------->>
+NAME OF PATIENT IS--------PRAVEEN
+AGE OF PATIENT IS--------34
+REGISTRATION ID OF PATIENT IS--------23456
+DISEASE OF PATIENT IS--------FEVER
+DOCTOR APPOINTED TO PATIENT IS--------DR.KALYAN
+TOTAL FEES OF PATIENT IS--------4547.32
+DATE OF ADMISSION IS--------11-MAR-2020
+TOTAL PATIENT COUNT IS------->>1
+----------------------------------------------------------------
+-------->>GIVEN DETAILS ARE SHOWN BELOW--------->>
+NAME OF PATIENT IS--------SHYAM
+AGE OF PATIENT IS--------45
+REGISTRATION ID OF PATIENT IS--------23457
+DISEASE OF PATIENT IS--------PAIN
+DOCTOR APPOINTED TO PATIENT IS--------DR.REVANTH
+TOTAL FEES OF PATIENT IS--------4589.32
+DATE OF ADMISSION IS--------11-MAR-2020
+TOTAL PATIENT COUNT IS------->>2
+----------------------------------------------------------------
+-----DO YOU WANT TO CONTINUE PRESS 1 FOR YES AND OTHER KEY FOR NO------
+1
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+2
+FULL NAME OF STAFF IS------MR.VAMSHI
+AGE OF STAFF IS------------21
+GENDER OF STAFF IS----------MALE
+ID OF STAFF IS---------------12345
+STAFF DESIGNATION IS ----------DOCTOR
+SALARY OF STAFF IS------------------50000.2
+CURRENT OR TODAY STAFF ATTENDANCE IS---------PRESENT
+TOTAL COUNT OF STAFF IS-------------------1
+FULL NAME OF STAFF IS------MR.RAKESH
+AGE OF STAFF IS------------23
+GENDER OF STAFF IS----------MALE
+ID OF STAFF IS---------------12349
+STAFF DESIGNATION IS ----------SURGEON
+SALARY OF STAFF IS------------------60000.2
+CURRENT OR TODAY STAFF ATTENDANCE IS---------PRESENT
+TOTAL COUNT OF STAFF IS-------------------2
+-----DO YOU WANT TO CONTINUE PRESS 1 FOR YES AND OTHER KEY FOR NO------
+1
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+3
+Name of facility is-----MEDICAL
+Charges of facility is------2000.0
+CALL FOR MORE QUERIES:---------123
+Name of facility is-----AMBULANCE
+Charges of facility is------1000.0
+CALL FOR MORE QUERIES:---------456
+Name of facility is-----LABORATORY
+Charges of facility is------5000.0
+CALL FOR MORE QUERIES:---------789
+Name of facility is-----CANTEEN
+Charges of facility is------500.0
+CALL FOR MORE QUERIES:---------1022
+-----DO YOU WANT TO CONTINUE PRESS 1 FOR YES AND OTHER KEY FOR NO------
+1
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+4
+Enter Vehicle Color (White/Black)
+White
+ENTER YOUR FULL NAME------
+IOS
+ENTER YOUR MOBILE NUMBER-------
+1234567890
+----BOOKING SUCCESSFUL-----1
+FULL NAME IS-------IOS
+MOBILE NUMBER IS---------1234567890
+Hope for the best, You're still ALive.
+-----DO YOU WANT TO CONTINUE PRESS 1 FOR YES AND OTHER KEY FOR NO------
+1
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+4
+Enter Vehicle Color (White/Black)
+Black
+ENTER YOUR FULL NAME------
+Android
+ENTER YOUR MOBILE NUMBER-------
+0987654321
+----BOOKING SUCCESSFUL-----1
+FULL NAME IS-------Android
+MOBILE NUMBER IS---------987654321
+Happy Journey, You're Dead.
+-----DO YOU WANT TO CONTINUE PRESS 1 FOR YES AND OTHER KEY FOR NO------
+1
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+5
+The Available Role is: Cardiologist
+Salary: 1000
+-----DO YOU WANT TO CONTINUE PRESS 1 FOR YES AND OTHER KEY FOR NO------
+1
+---------CHOOSE YOUR SPECIFIC OPERATION (Give Input:[1-6])---------
+1.) ACCESS THE PATIENT DB-------(PRINCIPLE OF ASSOCIATION IS ACHEIVED HERE)
+	//ie..,Hospital is associated with all the patients information.
+2.) ACCESS THE STAFF DB-------(PRINCIPLE OF ABSTRACTION IS ACHIEVED HERE)
+	//ie..,Staff details are abstracted and implemented in other class. 
+3.) CHECK FACILITIES------------(PRINICIPLE OF INHERITENCE IS ACHIEVED HERE)
+	//ie..,Phone Numbers methods is inherited from parent. 
+4.) BOOK AMBULANCE-------------(PRINCIPLE OF POLYMORPHISM IS ACHIEVED HERE
+	//ie..,If color is white, the AMBULANCE is to Hospital else to Mortuary. 
+5.) CHECK FOR NEW JOBS---------(PRINCIPLE OF ENCAPSULATION IS ACHIEVED HERE)
+	//ie..,The salary is disclosed and viewed to only the active users 
+6.) MEDICINE DETAILS-----------(PRINCIPLE OF AGGREGATION IS ACHIEVED HERE)
+	//ie..,Here both the Hospital and the Medicines are independent(loosely-packed) 
+6
+Homeopathy can be used for 6 years
+Capsules is the only form we prefer
+

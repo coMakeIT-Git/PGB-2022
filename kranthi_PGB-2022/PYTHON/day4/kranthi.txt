@@ -1,0 +1,4 @@
+This is my file to count numbers of words in it 
+This is a new line kranthi 
+This is the third  line kranthi 
+I am keep on writing my fourth line yaar

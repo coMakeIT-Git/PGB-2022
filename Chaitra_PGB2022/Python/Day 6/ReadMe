@@ -1,0 +1,107 @@
+1. Data.py
+
+Numeric types are mutable
+String and tuple are immutable. Lists are mutable.
+Boolean types are mutable
+Dictionary types are mutable
+Sets are immutable.
+
+
+
+
+
+2. Lists.py
+
+List:  ['Apple', 'Banana', 'Cherry']
+Added Grapes:  ['Apple', 'Banana', 'Cherry', 'Grapes']
+Copied List:  ['Apple', 'Banana', 'Cherry', 'Grapes']
+Cherry Count: 1
+Merged Lists: ['Apple', 'Banana', 'Cherry', 'Grapes', 'Ford', 'BMW', 'Volvo']
+Cherry Index: 2
+Inserted Orange at Position 2:  ['Apple', 'Orange', 'Banana', 'Cherry', 'Grapes', 'Ford', 'BMW', 'Volvo']
+Deleted element at Position 2:  ['Apple', 'Banana', 'Cherry', 'Grapes', 'Ford', 'BMW', 'Volvo']
+Deleted element Banana:  ['Apple', 'Cherry', 'Grapes', 'Ford', 'BMW', 'Volvo']
+Reverse Order:  ['Volvo', 'BMW', 'Ford', 'Grapes', 'Cherry', 'Apple']
+Sorted Cars:  ['BMW', 'Ford', 'Volvo']
+Empty List:  []
+
+
+
+
+
+3. PlusOperator.py
+
+12Luna
+LunaTrue
+[1, 2, 3, 2, 4, 5]
+
+
+
+
+
+4. Strings.py
+
+String: Hello! Welcome to CoMakeIT
+Upper Case: HELLO! WELCOME TO COMAKEIT
+Lower Case: hello! welcome to comakeit
+Occurences of o:  4
+Ends with CoMakeIT: True
+All Alphabets:  False
+Capitalize first character:  Hello! welcome to comakeit
+Capitalize first character of each word:  Hello! Welcome To Comakeit
+Index of CoMakeIT:  18
+Reverse:  TIekaMoC ot emocleW !olleH
+
+
+
+
+
+5. TupleDict.py
+
+***Tuples***
+Tuple:  (1, 2, 4, 6, 21, 43, 1, 4, 2, 6, 6)
+Count of 6:  3
+Index of 6:  3
+
+***Dictionaries***
+Dictionary: {'one': 5, 'two': 5, 'three': 5}
+All Pairs:  dict_items([('one', 5), ('two', 5), ('three', 5)])
+Value of key One:  5
+Removed element at key One:  {'two': 5, 'three': 5}
+Last inserted value removed:  ('three', 5)
+Dictionary: {'two': 5}
+
+
+
+
+
+6. Sets.py
+
+Set:  {1, 2, 3}
+Removed 3: {1, 2}
+
+Set X:  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 34, 99, 21, 56}
+Set Y:  {1, 2, 34, 99, 9, 21, 56}
+
+X-Y:  {0, 3, 4, 5, 6, 7, 8}
+
+Removing common items:
+Set X:  {0, 3, 4, 5, 6, 7, 8}
+Set Y:  set()
+
+X and Y are Disjoint:  False
+
+X is a subset of Y:  False
+
+Y is a subset of X:  True
+
+Union:  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 34, 99, 56}
+
+Union using |:  {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 34, 99, 56}
+
+Symmetric Difference:  {0, 3, 4, 5, 6, 7, 8}
+
+
+
+
+

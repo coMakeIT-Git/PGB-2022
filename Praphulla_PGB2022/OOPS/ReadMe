@@ -1,0 +1,86 @@
+****OUTPUT:*****
+-------------------------------------------------------------------------------------
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/OOPS$ javac Demo.java
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/OOPS$ java Demo
+
+ *All employee details are* :
+
+ BurgerKing Employee's Name: Raphy ,Id: 35 ,Salary:20000
+
+ BurgerKing Employee's Name: Praph ,Id: 70 ,Salary:10000
+
+ BurgerKing Employee's Name: Ladoo ,Id: 73 ,Salary:30000
+
+ BurgerKing Employee's Name: Chaitu ,Id: 53 ,Salary:40000
+
+ The details of the employee are EmployeeName:Praphulla Id:53
+
+ The details of the employee are EmployeeName:Raag Id:58 Salary:10000
+
+ Bonus Amount recieved is: 1000
+
+Praphulla is employee of BURGER KING, Branch Madhapur, Hyderabad
+
+ Branch  Names: Madhapur
+
+ Branch  Names: Miyapur
+
+ Employees in Madhapur Branch are:
+
+Raphy
+
+Praph
+
+ Employees in Miyapur Branch are:
+
+Ladoo
+
+Chaitu
+
+ Branches :Branch@4fca772d
+
+ Branches :Branch@9807454
+
+ Total number of Employees  present in all branches of BurgerKing are: 4
+
+ *** Meal Preparation***
+
+ ***Veg Meal***
+
+ Item : Veg Burger
+
+ Packing : Wrapper
+
+ Meal Price : 159.0
+
+ Item : Coke
+
+ Packing : Bottle
+
+ Meal Price : 60.0
+
+ Total Cost of the order: 219.0
+
+ ***Non-Veg Meal***
+
+ Item : Chicken Burger
+
+ Packing : Wrapper
+
+ Meal Price : 259.5
+
+ Item : Pepsi
+
+ Packing : Bottle
+
+ Meal Price : 60.0
+
+ Total Cost of the order: 319.5
+ ------------------------------------------------------------------------------------------------------------
+****OUTPUT Composite.java****
+javac Composite.java 
+localadmin@INHYDUPGB1:~/PGB-2022/PGB-2022/Praphulla_PGB2022/OOPS/Composition$ java Composite
+Bun : Plain and  Veggies : Lettuce-Onions-Tomatoes PattyMeat
+Bun : Seseme Seeds and  Veggies : Onions-cheese-Lettuce PattyPotato-onion
+Bun : Pretzel and  Veggies : Lettuce-Onions-Tomatoes PattyChicken
+

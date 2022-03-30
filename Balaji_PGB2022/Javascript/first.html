@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+    
+    <h1>  Number Conversion</h1>
+  <label> Enter Binary Value </label><br><br>
+  <input type="text" id ="Binary" ><br><br>
+  <button onclick="decimalconversion()" class="Block">Convert to decimal </button>  <br><br>
+  <label>Decimal Value is :</label>
+  <span id="Decimal"  size=20px></span><br><br><br>
+  <button onclick="hexadecimalconversion()" class="Block">Convert to hexa decimal</button><br><br>
+  <label>Hexa Decimal Value is:</label>
+  
+  <span id="Hexa Decimal"  size=20px></span><br><br><br>
+<script>
+  function decimalconversion(){
+    binary=document.getElementById("Binary").value
+      var decimal = parseInt(binary, 2);
+    document.getElementById("Decimal").innerHTML=decimal;
+    }
+    
+    function hexadecimalconversion()
+    {
+        binary=document.getElementById("Binary").value
+        var hexa = parseInt(binary, 2). toString(16)
+    document.getElementById("Hexa Decimal").innerHTML=hexa
+    }
+    
+
+</script>
+
+
+  </body>
+</html>

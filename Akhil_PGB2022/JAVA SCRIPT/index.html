@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <script src="app.js"></script> 
+<body>
+    <center>
+    <h2>Memory Data Converter</h2>
+    <p>Type a value in any of the fields to convert between weight measurements:</p>
+    <p>
+        <label>Byte :</label>
+        <input id="Byte" type="number" placeholder="Byte"
+        oninput="converterByte(this.value)">
+      </p>
+      <p>
+        <label>Kilobyte :</label>
+        <input id="kb" type="number" placeholder="Kilobyte"
+        oninput="converterKB(this.value)">
+      </p>
+      <p>
+        <label>Megabyte :</label>
+        <input id="mb" type="number" placeholder="Megabyte"
+        oninput="converterMB(this.value)">
+      </p>
+      <p>
+        <label>Gigabyte :</label>
+        <input id="gb" type="number" placeholder="Gigabyte"
+        oninput="converterGB(this.value)">
+      </p>
+    </center>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.container{
+  display:flex;
+  flex-direction:column;
+  background-color:white;
+  min-height:100vh;
+  padding:20px;
+}
+.counter-value{
+  color:red;
+}
+body{
+  margin:0px;
+}
+.buttonE{
+  color:white;
+  background-color:blue;
+  border-width:0px;
+  height:30px;
+  width:80px;
+  padding:5px;
+}

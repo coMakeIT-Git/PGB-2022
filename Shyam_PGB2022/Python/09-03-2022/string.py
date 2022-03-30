@@ -1,0 +1,13 @@
+a = "Shyam sai Dogga"
+u = a.upper()
+print(u)
+l = a.lower()
+print(l)
+c = a.count('a')
+print(c)
+print(a.endswith('a'))
+print(a.isalpha())
+print(l.capitalize())
+print(a.title())
+print(a.find('a'))
+print(a[::-1])

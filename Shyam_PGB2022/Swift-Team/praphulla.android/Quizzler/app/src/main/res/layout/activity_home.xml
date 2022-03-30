@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_horizontal"
+    android:background="#E6E6FA"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAF3F6"
+            android:backgroundTint="#FAF3F6"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_weight="4"
+                app:srcCompat="@drawable/img_1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:background="#f0efeb"
+        android:backgroundTint="#FAF3F6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/autour_one"
+            android:text="Take a Quiz!"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#875E5E"
+            android:textIsSelectable="false"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/javabut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#875E5E"
+            android:text="Java"
+            android:fontFamily="@font/autour_one"
+            app:backgroundTint="#d3ab9e"
+            app:cornerRadius="30dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pybut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#875E5E"
+            android:text="Python"
+            android:fontFamily="@font/autour_one"
+            app:backgroundTint="#d3ab9e"
+            app:cornerRadius="30dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
