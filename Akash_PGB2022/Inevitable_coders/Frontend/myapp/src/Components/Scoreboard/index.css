@@ -1,0 +1,32 @@
+.score-main-container{
+    background-image: url("https://img.freepik.com/free-vector/sparkling-golden-stars-confetti-burst-background_1017-32368.jpg?t=st=1648547234~exp=1648547834~hmac=9e6442937195fcd53fd0cfbc7dd00855c93d38699aae0cc2d723b71612a4fec6&w=1380");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.score-container{
+    background-color: white;
+    height:300px;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.score-head{
+    font-family:"serif";
+    font-size:38px;
+    font-weight: 600;
+    color:#3F33FF;
+}
+.spanE{
+    color: red;
+}
+.spanE1{
+    color: green;
+}
