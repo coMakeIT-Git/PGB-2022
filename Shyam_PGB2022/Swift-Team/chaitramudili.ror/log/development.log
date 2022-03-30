@@ -1,0 +1,616 @@
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5652581995326315210)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestions (20220324112916)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "category" character varying, "difficulty" character varying, "questionString" character varying, "correct_answer" character varying, "wrong_answer" character varying[] DEFAULT '{}', "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220324112916"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-24 11:30:35.058609"], ["updated_at", "2022-03-24 11:30:35.058609"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5652581995326315210)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/questions" for ::1 at 2022-03-24 17:01:02 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "type"=>"multiple", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.2ms | Allocations: 6306)
+
+
+  
+NameError (undefined local variable or method `answer' for #<QuestionsController:0x000000000060b8>):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+Started GET "/questions" for ::1 at 2022-03-24 17:01:07 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"JavaScript", "type"=>"multiple", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1120)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:01:23 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1944)
+
+
+  
+NameError (undefined local variable or method `answer' for #<QuestionsController:0x000000000061f8>):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+Started POST "/questions" for ::1 at 2022-03-24 17:02:14 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.5ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Javascript is an _______ language?"], ["correct_answer", "Object-Oriented"], ["created_at", "2022-03-24 11:32:14.249922"], ["updated_at", "2022-03-24 11:32:14.249922"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 9ms (Views: 0.5ms | ActiveRecord: 4.0ms | Allocations: 6885)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:06:47 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Javascript is an _______ language?"], ["correct_answer", "Object-Oriented"], ["created_at", "2022-03-24 11:36:47.585370"], ["updated_at", "2022-03-24 11:36:47.585370"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 3ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:09:36 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Javascript is an _______ language?",
+      "correct_answer":"Object-Oriented",
+      "incorrect_answers": '{"Object-Based", "Procedural", "None of the above"}'
+    }
+
+Processing by QuestionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 154)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at '{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Javascript is an _______ language?",
+      "correct_answer":"Object-Oriented",
+      "incorrect_answers": '{"Object-Based", "Procedural", "None of the above"}'
+    }
+'):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+Started POST "/questions" for ::1 at 2022-03-24 17:09:49 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Javascript is an _______ language?",
+      "correct_answer":"Object-Oriented",
+      "incorrect_answers": {"Object-Based", "Procedural", "None of the above"}
+    }
+
+Processing by QuestionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at '{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Javascript is an _______ language?",
+      "correct_answer":"Object-Oriented",
+      "incorrect_answers": {"Object-Based", "Procedural", "None of the above"}
+    }
+'):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+Started POST "/questions" for ::1 at 2022-03-24 17:10:07 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Javascript is an _______ language?",
+      "correct_answer":"Object-Oriented",
+      "incorrect_answers": ['Object-Based', "Procedural", "None of the above"]
+    }
+
+Processing by QuestionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 138)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (439: unexpected token at ''Object-Based', "Procedural", "None of the above"]
+    }
+'):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5652581995326315210)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5652581995326315210)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/questions" for ::1 at 2022-03-24 17:28:08 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 2.8ms | Allocations: 7488)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:29:59 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B", "incorrect_answers"=>["var", "let", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following keywords is used to define a variable in Javascript?"], ["correct_answer", "Both A and B"], ["created_at", "2022-03-24 11:59:59.982014"], ["updated_at", "2022-03-24 11:59:59.982014"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 2880)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:30:08 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Which of the following keywords is used to define a variable in Javascript?",
+      "correct_answer":"Both A and B",
+      "incorrect_answers":[
+          "var", 
+          "let", 
+          "None of the above"
+          ],
+    }
+Processing by QuestionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 169)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at '{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Which of the following keywords is used to define a variable in Javascript?",
+      "correct_answer":"Both A and B",
+      "incorrect_answers":[
+          "var", 
+          "let", 
+          "None of the above"
+          ],
+    }'):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+Started GET "/questions" for ::1 at 2022-03-24 17:31:18 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B", "incorrect_answers"=>["var", "let", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B"}}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 675)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:31:32 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B", "incorrect_answers"=>["var", "let", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following keywords is used to define a variable in Javascript?"], ["correct_answer", "Both A and B"], ["created_at", "2022-03-24 12:01:32.776679"], ["updated_at", "2022-03-24 12:01:32.776679"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1958)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:34:19 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{
+      "category":"JavaScript",
+      "difficulty":"easy",
+      "questionString":"Which of the following keywords is used to define a variable in Javascript?",
+      "correct_answer":"Both A and B",
+      "incorrect_answers":[
+          {"var"}, 
+          "let", 
+          "None of the above"
+          ]
+    }
+Processing by QuestionsController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 143)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (439: unexpected token at '{"var"}, 
+          "let", 
+          "None of the above"
+          ]
+    }'):
+  
+app/controllers/questions_controller.rb:49:in `question_params'
+app/controllers/questions_controller.rb:18:in `create'
+Started GET "/questions" for ::1 at 2022-03-24 17:38:38 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B", "incorrect_answers"=>["var", "let", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B"}}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 2.9ms | Allocations: 2836)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:40:54 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented", "incorrect_answers"=>["Object-Based", "Procedural", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Javascript is an _______ language?", "correct_answer"=>"Object-Oriented"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Javascript is an _______ language?"], ["correct_answer", "Object-Oriented"], ["created_at", "2022-03-24 12:10:54.078399"], ["updated_at", "2022-03-24 12:10:54.078399"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1963)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:41:09 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B", "incorrect_answers"=>["var", "let", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following keywords is used to define a variable in Javascript?", "correct_answer"=>"Both A and B"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following keywords is used to define a variable in Javascript?"], ["correct_answer", "Both A and B"], ["created_at", "2022-03-24 12:11:09.269760"], ["updated_at", "2022-03-24 12:11:09.269760"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:41:21 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following methods is used to access HTML elements using Javascript?", "correct_answer"=>"Both A and B", "incorrect_answers"=>["getElementById()", "getElementsByClassName()", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following methods is used to access HTML elements using Javascript?", "correct_answer"=>"Both A and B"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following methods is used to access HTML elements using Javascript?"], ["correct_answer", "Both A and B"], ["created_at", "2022-03-24 12:11:21.910651"], ["updated_at", "2022-03-24 12:11:21.910651"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1962)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:41:35 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Upon encountering empty statements, what does the Javascript Interpreter do?", "correct_answer"=>"Ignores the statements", "incorrect_answers"=>["Throws an error", "Gives a warning", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Upon encountering empty statements, what does the Javascript Interpreter do?", "correct_answer"=>"Ignores the statements"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Upon encountering empty statements, what does the Javascript Interpreter do?"], ["correct_answer", "Ignores the statements"], ["created_at", "2022-03-24 12:11:35.325250"], ["updated_at", "2022-03-24 12:11:35.325250"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 1962)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:41:56 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following methods can be used to display data in some form using Javascript?", "correct_answer"=>"All of the above", "incorrect_answers"=>["document.write()", "console.log()", "window.alert()"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following methods can be used to display data in some form using Javascript?", "correct_answer"=>"All of the above"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following methods can be used to display data in some form using Javascript?"], ["correct_answer", "All of the above"], ["created_at", "2022-03-24 12:11:56.097085"], ["updated_at", "2022-03-24 12:11:56.097085"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:42:06 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"What keyword is used to check whether a given property is valid or not?", "correct_answer"=>"in", "incorrect_answers"=>["is in", "exists", "lies"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"What keyword is used to check whether a given property is valid or not?", "correct_answer"=>"in"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "What keyword is used to check whether a given property is valid or not?"], ["correct_answer", "in"], ["created_at", "2022-03-24 12:12:06.315108"], ["updated_at", "2022-03-24 12:12:06.315108"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:42:17 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following methods can be used to display data in some form using Javascript?", "correct_answer"=>"All of the above", "incorrect_answers"=>["document.write()", "console.log()", "window.alert()"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following methods can be used to display data in some form using Javascript?", "correct_answer"=>"All of the above"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following methods can be used to display data in some form using Javascript?"], ["correct_answer", "All of the above"], ["created_at", "2022-03-24 12:12:17.594712"], ["updated_at", "2022-03-24 12:12:17.594712"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:42:32 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"When an operator’s value is NULL, the typeof returned by the unary operator is:", "correct_answer"=>"Object", "incorrect_answers"=>["Boolean", "Undefined", "Integer"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"When an operator’s value is NULL, the typeof returned by the unary operator is:", "correct_answer"=>"Object"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "When an operator’s value is NULL, the typeof returned by the unary operator is:"], ["correct_answer", "Object"], ["created_at", "2022-03-24 12:12:32.838740"], ["updated_at", "2022-03-24 12:12:32.838740"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1974)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:42:40 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which function is used to serialize an object into a JSON string in Javascript?", "correct_answer"=>"stringify()", "incorrect_answers"=>["parse", "convert", "None of the above"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which function is used to serialize an object into a JSON string in Javascript?", "correct_answer"=>"stringify()"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which function is used to serialize an object into a JSON string in Javascript?"], ["correct_answer", "stringify()"], ["created_at", "2022-03-24 12:12:40.671141"], ["updated_at", "2022-03-24 12:12:40.671141"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 17:42:55 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following are closures in Javascript?", "correct_answer"=>"All of the above", "incorrect_answers"=>["Variables", "Functions", "Objects"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following are closures in Javascript?", "correct_answer"=>"All of the above"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "JavaScript"], ["difficulty", "easy"], ["questionString", "Which of the following are closures in Javascript?"], ["correct_answer", "All of the above"], ["created_at", "2022-03-24 12:12:55.796448"], ["updated_at", "2022-03-24 12:12:55.796448"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 1958)
+
+
+Started GET "/questions" for ::1 at 2022-03-24 17:55:57 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following are closures in Javascript?", "correct_answer"=>"All of the above", "incorrect_answers"=>["Variables", "Functions", "Objects"], "question"=>{"category"=>"JavaScript", "difficulty"=>"easy", "questionString"=>"Which of the following are closures in Javascript?", "correct_answer"=>"All of the above"}}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 3.2ms | Allocations: 4336)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:07:27 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Number of primitive data types in Java are?", "correct_answer"=>"8", "incorrect_answers"=>["6", "7", "9"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Number of primitive data types in Java are?", "correct_answer"=>"8"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "Number of primitive data types in Java are?"], ["correct_answer", "8"], ["created_at", "2022-03-24 12:37:27.654752"], ["updated_at", "2022-03-24 12:37:27.654752"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 12ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 3940)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:07:42 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"When an array is passed to a method, what does the method receive?", "correct_answer"=>"The reference of the array", "incorrect_answers"=>["A copy of the array", "Length of the array", "Copy of first element"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"When an array is passed to a method, what does the method receive?", "correct_answer"=>"The reference of the array"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "When an array is passed to a method, what does the method receive?"], ["correct_answer", "The reference of the array"], ["created_at", "2022-03-24 12:37:42.766848"], ["updated_at", "2022-03-24 12:37:42.766848"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 1958)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:07:52 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Arrays in java are-", "correct_answer"=>"objects", "incorrect_answers"=>["Object references", "Primitive data type", "None"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Arrays in java are-", "correct_answer"=>"objects"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "Arrays in java are-"], ["correct_answer", "objects"], ["created_at", "2022-03-24 12:37:52.388149"], ["updated_at", "2022-03-24 12:37:52.388149"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 1956)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:07:59 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Identify the keyword among the following that makes a variable belong to a class,rather than being defined for each instance of the class.", "correct_answer"=>"static", "incorrect_answers"=>["final", "volatile", "abstract"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Identify the keyword among the following that makes a variable belong to a class,rather than being defined for each instance of the class.", "correct_answer"=>"static"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "Identify the keyword among the following that makes a variable belong to a class,rather than being defined for each instance of the class."], ["correct_answer", "static"], ["created_at", "2022-03-24 12:37:59.938690"], ["updated_at", "2022-03-24 12:37:59.938690"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:08:06 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"compareTo() returns", "correct_answer"=>"An int value", "incorrect_answers"=>["True", "False", "None"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"compareTo() returns", "correct_answer"=>"An int value"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "compareTo() returns"], ["correct_answer", "An int value"], ["created_at", "2022-03-24 12:38:06.517843"], ["updated_at", "2022-03-24 12:38:06.517843"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1956)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:08:14 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"To which of the following does the class string belong to.", "correct_answer"=>"java.lang", "incorrect_answers"=>["java.awt", "java.applet", "java.string"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"To which of the following does the class string belong to.", "correct_answer"=>"java.lang"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "To which of the following does the class string belong to."], ["correct_answer", "java.lang"], ["created_at", "2022-03-24 12:38:14.792387"], ["updated_at", "2022-03-24 12:38:14.792387"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:08:21 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Identify the return type of a method that does not return any value.", "correct_answer"=>"void", "incorrect_answers"=>["int", "Double", "None"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Identify the return type of a method that does not return any value.", "correct_answer"=>"void"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "Identify the return type of a method that does not return any value."], ["correct_answer", "void"], ["created_at", "2022-03-24 12:38:21.897162"], ["updated_at", "2022-03-24 12:38:21.897162"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:08:28 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Where does the system stores parameters and local variables whenever a method is invoked?", "correct_answer"=>"Stack", "incorrect_answers"=>["Heap", "Array", "Tree"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Where does the system stores parameters and local variables whenever a method is invoked?", "correct_answer"=>"Stack"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "Where does the system stores parameters and local variables whenever a method is invoked?"], ["correct_answer", "Stack"], ["created_at", "2022-03-24 12:38:28.744988"], ["updated_at", "2022-03-24 12:38:28.744988"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1957)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:08:35 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Identify the modifier which cannot be used for constructor.", "correct_answer"=>"static", "incorrect_answers"=>["public", "protected", "private"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"Identify the modifier which cannot be used for constructor.", "correct_answer"=>"static"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "Identify the modifier which cannot be used for constructor."], ["correct_answer", "static"], ["created_at", "2022-03-24 12:38:35.388616"], ["updated_at", "2022-03-24 12:38:35.388616"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 1958)
+
+
+Started POST "/questions" for ::1 at 2022-03-24 18:08:41 +0530
+Processing by QuestionsController#create as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mQuestion Create (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("category", "difficulty", "questionString", "correct_answer", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "Java"], ["difficulty", "easy"], ["questionString", "What is Runnable?"], ["correct_answer", "Interface"], ["created_at", "2022-03-24 12:38:41.373137"], ["updated_at", "2022-03-24 12:38:41.373137"]]
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/questions_controller.rb:20:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1956)
+
+
+Started GET "/questions" for ::1 at 2022-03-24 18:08:47 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface"}}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 3594)
+
+
+Started GET "/questions" for ::1 at 2022-03-24 18:12:39 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface"}}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3701)
+
+
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: bright-squid-49.loca.lt
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: bright-squid-49.loca.lt
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked host: bright-squid-49.loca.lt
+Started GET "/" for 127.0.0.1 at 2022-03-25 10:08:57 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 417)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3657)
+
+
+Started GET "/questions" for ::1 at 2022-03-25 10:09:45 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"]}}
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 4.5ms | Allocations: 7909)
+
+
+Started GET "/" for ::1 at 2022-03-25 16:19:07 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "welcome"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"]}}
+  Rendering /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 417)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3301)
+
+
+Started GET "/" for ::1 at 2022-03-25 16:20:06 +0530
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "welcome"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"]}}
+  Rendering /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.1ms | Allocations: 209)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 1051)
+
+
+Started GET "/questions" for ::1 at 2022-03-25 16:20:12 +0530
+Processing by QuestionsController#index as */*
+  Parameters: {"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"], "question"=>{"category"=>"Java", "difficulty"=>"easy", "questionString"=>"What is Runnable?", "correct_answer"=>"Interface", "incorrect_answers"=>["Abstract class", "Class", "Method"]}}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 2.6ms | Allocations: 7905)
+
+
+Started GET "/questions" for ::1 at 2022-03-25 16:21:35 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+https://polar-lowlands-36018.herokuapp.com/
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 3545)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 11:32:23 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 417)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3256)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-03-28 11:32:23 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 17:43:41 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/localadmin/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 417)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3256)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-03-29 17:43:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/questions" for 127.0.0.1 at 2022-03-29 17:43:47 +0530
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (2.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 6.3ms | Allocations: 9223)
+
+

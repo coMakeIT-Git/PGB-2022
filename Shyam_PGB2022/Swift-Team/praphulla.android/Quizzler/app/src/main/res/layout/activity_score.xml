@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Score">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#875E5E" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FAF3F6"
+            android:backgroundTint="#FAF3F6"
+            android:fontFamily="@font/autour_one"
+            android:gravity="center"
+            android:text="Score Board"
+            android:textAlignment="gravity"
+            android:textAllCaps="true"
+            android:textColor="#875E5E"
+            android:textColorHint="@color/purple_200"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/i1"
+            tools:srcCompat="@drawable/img" />
+
+        <TextView
+            android:id="@+id/scorecard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="00"
+            android:textAlignment="center"
+            android:textSize="96sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAF3F6">
+
+            <Button
+                android:id="@+id/butHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/autour_one"
+                android:text="Home" />
+
+            <Button
+                android:id="@+id/butRetake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/autour_one"
+                android:text="Retake" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
