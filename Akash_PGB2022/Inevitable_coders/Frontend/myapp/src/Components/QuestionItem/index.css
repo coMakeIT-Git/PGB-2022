@@ -1,0 +1,22 @@
+.item-container{
+    background-color:black;
+    border-radius: 10px;
+    padding:10px;
+    margin: 10px;
+    width: 50%;
+}
+.item-head{
+    color:white;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    font-weight: 600;
+}
+.option-container{
+    display: flex;
+    flex-direction: column;
+    color:skyblue;
+    font-weight: 450;
+}
+.inputE{
+    accent-color:red;
+}
