@@ -1,8 +1,9 @@
-let reviews_container = document.getElementById("reviewsContainer")
-let movie_name = document.getElementById("titleInput")
-let movie_review = document.getElementById("reviewTextarea")
+
 
 function onAddReview() {
+    let reviews_container = document.getElementById("reviewsContainer")
+    let movie_name = document.getElementById("titleInput")
+    let movie_review = document.getElementById("reviewTextarea")
     let movietitle = movie_name.value
     let moviereview = movie_review.value
     if (movietitle ==="") {
