@@ -10,7 +10,15 @@ function equal()
 var exp = document.form1.textview.value;
 if(exp)
 {
-document.form1.textview.value = eval(exp)
+    try
+    {
+        var result=eval(exp);
+        document.form1.textview.value = result;
+    }
+    catch(e)
+    {
+        alert("Please Enter Valid Expression");
+    }
 }
 }
 
